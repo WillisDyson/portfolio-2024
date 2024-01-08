@@ -18,43 +18,44 @@
 </head>
 
 <body>
-    <nav>
-        <div aria-role="button" tabindex="0" class="nav__hamburger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
-                <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
-                    <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34" transform="translate(0 -2.053)" fill="none"
-                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
-                    <path id="Path_13" data-name="Path 13" d="M4.5,9H25.34" fill="none" stroke="#00cf6e"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
-                    <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34" transform="translate(0 -4.106)" fill="none"
-                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
-                </g>
-            </svg>
+    <nav class="nav">
+        <div class="nav__wrap">
+            <div aria-role="button" tabindex="0" class="nav__hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
+                    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
+                        <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34" transform="translate(0 -2.053)"
+                            fill="none" stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" />
+                        <path id="Path_13" data-name="Path 13" d="M4.5,9H25.34" fill="none" stroke="#00cf6e"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                        <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34" transform="translate(0 -4.106)"
+                            fill="none" stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="3" />
+                    </g>
+                </svg>
+            </div>
+            <div class="nav__inner">
+                <a class="nav__item nav__item--active" href="">About me</a>
+                <a class="nav__item" href="">Skills and specialisations</a>
+                <a class="nav__item" href="">Career and education</a>
+                <a class="nav__item" href="">Open source contributions</a>
+                <a class="nav__item" href="">Social media</a>
+                <a class="nav__item" href="">Contact</a>
+                <a class="nav__item nav__item--cv" href="">Download my CV</a>
+            </div>
+        </div>
 
-        </div>
-        <div class="nav__inner">
-            <a class="nav__item nav__item--active" href="">About me</a>
-            <a class="nav__item" href="">Skills and specialisations</a>
-            <a class="nav__item" href="">Career and education</a>
-            <a class="nav__item" href="">Open source contributions</a>
-            <a class="nav__item" href="">Social media</a>
-            <a class="nav__item" href="">Contact</a>
-            <a class="nav__item nav__item--cv" href="">Download my CV</a>
-        </div>
     </nav>
 
     <header class="about-me" aria-label="About me">
-        <p style="background-color: grey; border: 2px solid orange; padding: 20px; margin: 50px 20px;">Website is still
-            under contruction – bugs may be present and functionality may be missing. Last update made on
-            04/01/2024.<br><br>Estimated completion late January 2024.</p>
         <div class="about">
-            <img class="about__img" src="images/willis.png"
+            <img class="about__img about-child" src="images/willis.png"
                 alt="Photograph of Willis. He has short brown hair, glasses, and short facial hair. He is wearing a green and white button-up shirt, in front of palm trees.">
-            <div class="about__upper">
+            <div class="about__upper about-child">
                 <h1 class="about__header">Hi, I'm <em>Willis</em></h1>
                 <img class="about__hand" src="images/wave.png" alt="Waving hand.">
             </div>
-            <div>
+            <div class="about-child">
                 <p class="about__sub-header">I'm a <em>Web Developer</em> and <em>Accessibility Specialist</em> based in
                     <em>Leeds, UK</em>
                 </p>
@@ -479,5 +480,7 @@
     </footer>
 
 </body>
+
+<script type="text/javascript" src="script.js"></script>
 
 </html>

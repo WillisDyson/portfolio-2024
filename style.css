@@ -7,6 +7,58 @@ body {
   transition: 0.3s;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    top: 30px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+.about-child {
+  position: relative;
+  opacity: 0;
+  top: 30px;
+}
+
+.about-child:nth-child(1) {
+  animation-name: floatIn;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.about-child:nth-child(2) {
+  animation-name: floatIn;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.about-child:nth-child(3) {
+  animation-name: floatIn;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.about-child:nth-child(4) {
+  animation-name: floatIn;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 .heading-two {
   font-size: 2.625rem;
   font-weight: 400;
@@ -39,51 +91,72 @@ body {
   }
 }
 
-nav {
-  background-color: #363636;
+.nav {
+  overflow: hidden;
+  position: fixed;
+  transition: 0.3s;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+@media (min-width: 650px) {
+  .nav {
+    background-color: #363636;
+  }
+}
+@media (max-width: 650px) {
+  .nav {
+    position: static;
+  }
+}
+.nav__hidden {
+  top: -67px;
+}
+.nav__wrap {
   display: flex;
   height: 67px;
 }
-@media screen and (max-width: 650px) {
-  nav {
-    height: 55px;
-  }
-}
-nav .nav__hamburger {
+.nav__hamburger {
   align-items: center;
   align-self: center;
   display: flex;
   margin-left: 15px;
 }
 @media screen and (min-width: 650px) {
-  nav .nav__hamburger {
+  .nav__hamburger {
     display: none;
   }
 }
-nav .nav__inner {
+.nav__inner {
+  animation-name: fadeIn;
+  animation-delay: 0.45s;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   max-width: 1600px;
+  opacity: 0;
+  position: relative;
   text-align: center;
   width: 100%;
 }
 @media screen and (min-width: 650px) {
-  nav .nav__inner {
+  .nav__inner {
     align-items: center;
   }
 }
 @media screen and (max-width: 650px) {
-  nav .nav__inner {
+  .nav__inner {
     display: none;
     flex-direction: column;
     text-align: left;
   }
 }
-nav .nav__inner--open {
+.nav__inner--open {
   display: flex;
 }
-nav .nav__item {
+.nav__item {
   border-bottom: 2px solid transparent;
   color: #fff;
   font-size: 1.125rem;
@@ -92,16 +165,16 @@ nav .nav__item {
   text-decoration: none;
   transition: 0.3s;
 }
-nav .nav__item:hover {
+.nav__item:hover {
   border-bottom: 2px solid #ffffff;
 }
-nav .nav__item--active {
+.nav__item--active {
   color: #00CF6E;
 }
-nav .nav__item--active:hover {
+.nav__item--active:hover {
   border-bottom: 2px solid #00CF6E;
 }
-nav .nav__item--cv {
+.nav__item--cv {
   background-color: #19A966;
   border-bottom: 0 !important;
   border-radius: 999px;
@@ -109,20 +182,31 @@ nav .nav__item--cv {
   transition: 0.8s;
   outline: 2px solid transparent;
 }
-nav .nav__item--cv:hover, nav .nav__item--cv:focus-visible {
+.nav__item--cv:hover, .nav__item--cv:focus-visible {
   background-color: transparent;
   color: #1BB76E;
   outline: 2px solid #1BB76E;
   transition: 0.2s;
 }
 @media (max-width: 1180px) {
-  nav .nav__item {
+  .nav__item {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .nav {
+    height: 55px;
   }
 }
 
 .about-me {
+  padding-top: 67px;
   text-align: center;
+}
+@media (max-width: 650px) {
+  .about-me {
+    padding-top: 0px;
+  }
 }
 
 .about__img {
@@ -217,6 +301,11 @@ nav .nav__item--cv:hover, nav .nav__item--cv:focus-visible {
   margin: 0 auto 100px;
   text-align: center;
   text-decoration: none;
+  animation-name: fadeIn;
+  animation-delay: 1.4s;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 @media screen and (max-width: 900px) {
   .more-info {
@@ -316,6 +405,30 @@ nav .nav__item--cv:hover, nav .nav__item--cv:focus-visible {
   }
 }
 
+.skill-card__wrap:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.skill-card__wrap:nth-child(2) {
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.skill-card__wrap:nth-child(3) {
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.skill-card__wrap:nth-child(4) {
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 .skill-card {
   background-color: #ffffff;
   border-radius: 20px;
@@ -330,6 +443,12 @@ nav .nav__item--cv:hover, nav .nav__item--cv:focus-visible {
   margin: 0 auto;
   max-width: 326px;
   padding: 8px;
+  position: relative;
+  opacity: 0;
+  top: 30px;
+}
+.skill-card__wrap--animate {
+  animation-name: floatIn;
 }
 @media screen and (max-width: 900px) {
   .skill-card {
