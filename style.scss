@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #272727;
     color: #fff;
@@ -6,6 +10,9 @@ body {
     transition: 0.3s;
 }
 
+.hidden {
+    display: none;
+}
 
 @keyframes fadeIn {
     from {
@@ -18,14 +25,36 @@ body {
 }
 
 @keyframes floatIn {
-    from {
+    0% {
         opacity: 0;
         top: 30px;
     }
 
-    to {
+    33% {
+        opacity: 0;
+        top: 30px;
+    }
+
+    100% {
         opacity: 1;
         top: 0;
+    }
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        top: -30px;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
     }
 }
 
@@ -38,8 +67,8 @@ body {
 @for $i from 0 through 3 {
     .about-child:nth-child(#{$i + 1}) {
         animation-name: floatIn;
-        animation-delay: (0.2 * $i) + s;
-        animation-duration: 1s;
+        animation-delay: (0.3 * $i) + s;
+        animation-duration: 1.5s;
         animation-fill-mode: forwards;
     }
 }
@@ -110,7 +139,7 @@ body {
 
     &__inner {
         animation-name: fadeIn;
-        animation-delay: 0.45s;
+        animation-delay: 0.95s;
         animation-duration: 1.2s;
         animation-fill-mode: forwards;
         display: flex;
@@ -289,7 +318,7 @@ body {
     text-decoration: none;
 
     animation-name: fadeIn;
-    animation-delay: 1.4s;
+    animation-delay: 1.9s;
     animation-duration: 1.4s;
     animation-fill-mode: forwards;
     opacity: 0;
@@ -597,19 +626,29 @@ body {
 
     &__heading {
         margin-bottom: 33px;
-        margin-top: 100px;
 
         @media screen and (max-width: 900px) {
-            margin-top: 60px;
             margin-bottom: 20px;
         }
     }
 
-    padding: 0 25px 100px;
+    padding: 100px 25px 100px;
 
     @media screen and (max-width: 900px) {
-        padding: 0 25px 60px;
+        padding: 60px 25px 60px;
     }
+}
+
+@for $i from 0 through 8 {
+    .career-child:nth-child(#{$i + 1}) {
+        animation-delay: (0.25 * $i) + s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.career-child {
+    opacity: 0;
 }
 
 .career-grid {
@@ -617,13 +656,16 @@ body {
     gap: 15px;
     grid-template-columns: 50% 50%;
 
+    &--animate {
+        animation-name: fadeIn;
+    }
+
     @media screen and (max-width: 600px) {
         gap: 0;
         grid-template-columns: 100%;
     }
 
-    &__logo,
-    &__blank {
+    &__logo {
         grid-column-start: 1;
         grid-column-end: 1;
     }
@@ -649,13 +691,7 @@ body {
 
     .career-info,
     &__line-wrap {
-        grid-column-start: 2;
-        grid-column-end: 2;
-
-        @media screen and (max-width: 600px) {
-            grid-column-start: 1;
-            grid-column-end: 1;
-        }
+        margin-top: 24px;
     }
 
     .career-info {
@@ -768,13 +804,26 @@ body {
     }
 }
 
+@for $i from 0 through 8 {
+    .work-item:nth-child(#{$i + 1}) {
+        animation-delay: (0.2 * $i) + s;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
 .work-item {
     background-color: #ffffff;
     border-radius: 23px;
     margin: 25px;
     text-align: left;
     text-decoration: none;
+    opacity: 0;
     overflow: hidden;
+
+    &--animate {
+        animation-name: fadeIn;
+    }
 
     @media screen and (max-width: 900px) {
         border-radius: 14px;
@@ -836,15 +885,28 @@ body {
     }
 }
 
+@for $i from 0 through 8 {
+    .social-item:nth-child(#{$i + 1}) {
+        animation-delay: (0.3 * $i) + s;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+    }
+}
+
 .social-item {
     display: flex;
     flex-direction: column;
+    opacity: 0;
     position: relative;
     row-gap: 16px;
     text-align: center;
     text-decoration: none;
     transition: 0.3s;
     top: 0;
+
+    &--animate {
+        animation-name: wave;
+    }
 
     @media screen and (max-width: 600px) {
         margin-bottom: 45px;

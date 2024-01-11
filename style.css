@@ -1,10 +1,18 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #272727;
   color: #fff;
   font-family: "sofia-pro-soft", Arial, sans-serif;
   margin: 0;
   transition: 0.3s;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes fadeIn {
@@ -16,13 +24,31 @@ body {
   }
 }
 @keyframes floatIn {
-  from {
+  0% {
     opacity: 0;
     top: 30px;
   }
-  to {
+  33% {
+    opacity: 0;
+    top: 30px;
+  }
+  100% {
     opacity: 1;
     top: 0;
+  }
+}
+@keyframes wave {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  50% {
+    opacity: 1;
+    top: -30px;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }
 .about-child {
@@ -34,28 +60,28 @@ body {
 .about-child:nth-child(1) {
   animation-name: floatIn;
   animation-delay: 0s;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
 .about-child:nth-child(2) {
   animation-name: floatIn;
-  animation-delay: 0.2s;
-  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
 .about-child:nth-child(3) {
   animation-name: floatIn;
-  animation-delay: 0.4s;
-  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
 .about-child:nth-child(4) {
   animation-name: floatIn;
-  animation-delay: 0.6s;
-  animation-duration: 1s;
+  animation-delay: 0.9s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -129,7 +155,7 @@ body {
 }
 .nav__inner {
   animation-name: fadeIn;
-  animation-delay: 0.45s;
+  animation-delay: 0.95s;
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
   display: flex;
@@ -302,7 +328,7 @@ body {
   text-align: center;
   text-decoration: none;
   animation-name: fadeIn;
-  animation-delay: 1.4s;
+  animation-delay: 1.9s;
   animation-duration: 1.4s;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -599,22 +625,78 @@ body {
 
 .career {
   max-width: 940px;
-  padding: 0 25px 100px;
+  padding: 100px 25px 100px;
 }
 .career__heading {
   margin-bottom: 33px;
-  margin-top: 100px;
 }
 @media screen and (max-width: 900px) {
   .career__heading {
-    margin-top: 60px;
     margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 900px) {
   .career {
-    padding: 0 25px 60px;
+    padding: 60px 25px 60px;
   }
+}
+
+.career-child:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(2) {
+  animation-delay: 0.25s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(3) {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(4) {
+  animation-delay: 0.75s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(5) {
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(6) {
+  animation-delay: 1.25s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(7) {
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(8) {
+  animation-delay: 1.75s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child:nth-child(9) {
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.career-child {
+  opacity: 0;
 }
 
 .career-grid {
@@ -622,13 +704,16 @@ body {
   gap: 15px;
   grid-template-columns: 50% 50%;
 }
+.career-grid--animate {
+  animation-name: fadeIn;
+}
 @media screen and (max-width: 600px) {
   .career-grid {
     gap: 0;
     grid-template-columns: 100%;
   }
 }
-.career-grid__logo, .career-grid__blank {
+.career-grid__logo {
   grid-column-start: 1;
   grid-column-end: 1;
 }
@@ -652,14 +737,7 @@ body {
   }
 }
 .career-grid .career-info, .career-grid__line-wrap {
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
-@media screen and (max-width: 600px) {
-  .career-grid .career-info, .career-grid__line-wrap {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
+  margin-top: 24px;
 }
 .career-grid .career-info {
   align-self: center;
@@ -769,13 +847,71 @@ body {
   }
 }
 
+.work-item:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(2) {
+  animation-delay: 0.2s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(3) {
+  animation-delay: 0.4s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(4) {
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(5) {
+  animation-delay: 0.8s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(6) {
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(7) {
+  animation-delay: 1.2s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(8) {
+  animation-delay: 1.4s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.work-item:nth-child(9) {
+  animation-delay: 1.6s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
 .work-item {
   background-color: #ffffff;
   border-radius: 23px;
   margin: 25px;
   text-align: left;
   text-decoration: none;
+  opacity: 0;
   overflow: hidden;
+}
+.work-item--animate {
+  animation-name: fadeIn;
 }
 @media screen and (max-width: 900px) {
   .work-item {
@@ -838,15 +974,73 @@ body {
   }
 }
 
+.social-item:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(2) {
+  animation-delay: 0.3s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(3) {
+  animation-delay: 0.6s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(4) {
+  animation-delay: 0.9s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(5) {
+  animation-delay: 1.2s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(6) {
+  animation-delay: 1.5s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(7) {
+  animation-delay: 1.8s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(8) {
+  animation-delay: 2.1s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.social-item:nth-child(9) {
+  animation-delay: 2.4s;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
 .social-item {
   display: flex;
   flex-direction: column;
+  opacity: 0;
   position: relative;
   row-gap: 16px;
   text-align: center;
   text-decoration: none;
   transition: 0.3s;
   top: 0;
+}
+.social-item--animate {
+  animation-name: wave;
 }
 @media screen and (max-width: 600px) {
   .social-item {
