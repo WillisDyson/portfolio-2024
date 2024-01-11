@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", makeElemsVisible);
 const mainElems = document.body.children;
 
 function makeElemsVisible() {
-    console.log("loaded");
 
 
     for (let i = 0; i < mainElems.length; i++) {
@@ -13,20 +12,53 @@ function makeElemsVisible() {
 const navBar = document.querySelector(".nav");
 let currentScrollPos = window.scrollY;
 let newScrollPos;
+let scrollTypeIs = "manual";
+let navLinks = document.querySelectorAll('.nav__item');
+let sections = document.querySelectorAll('.section');
+let visibleSections = [];
+let timeoutIsActive = false;
+let scrollTimeout;
+let lastVisibleSection;
 
-document.addEventListener("scroll", toggleNav);
+document.addEventListener("scroll", (e) => {
+    toggleNav();
+});
+
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", () => {
+        clearTimeout(scrollTimeout);
+        timeoutIsActive = false;
+        scrollTypeIs = "auto";
+        toggleNav();
+    });
+}
+
+function handleAutoScroll() {
+    scrollTypeIs = "manual";
+    timeoutIsActive = false;
+}
 
 function toggleNav() {
     newScrollPos = window.scrollY;
 
-    if (newScrollPos >= 1000) {
-        if (newScrollPos > currentScrollPos) {
-            document.querySelector(".nav").classList.add("nav__hidden");
+    if (scrollTypeIs === "manual") {
+        if (newScrollPos >= 1000) {
+            if (newScrollPos > currentScrollPos) {
+                document.querySelector(".nav").classList.add("nav__hidden");
+            } else {
+                document.querySelector(".nav").classList.remove("nav__hidden");
+            }
         } else {
             document.querySelector(".nav").classList.remove("nav__hidden");
         }
-    } else {
-        document.querySelector(".nav").classList.remove("nav__hidden");
+
+    } else if (scrollTypeIs !== "manual") {
+
+        if (!timeoutIsActive) {
+            timeoutIsActive = true;
+            scrollTimeout = setTimeout(handleAutoScroll, "2000");
+        }
+
     }
 
     currentScrollPos = newScrollPos;
@@ -125,17 +157,6 @@ function animateSocialGrid() {
 }
 
 
-
-
-
-
-
-
-let navLinks = document.querySelectorAll('.nav__item');
-let sections = document.querySelectorAll('.section');
-let visibleSections = [];
-
-
 const sectionOpts = {
     root: null,
     rootMargin: '1px',
@@ -157,13 +178,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 if (entry.isIntersecting) {
                     if (!visibleSections.includes(sectionName)) {
                         visibleSections.push(sectionName);
-                        console.log(sectionName + " is visible");
                     }
                 } else {
                     let indexToRemove = visibleSections.indexOf(sectionName);
                     if (indexToRemove !== -1) {
                         visibleSections.splice(indexToRemove, 1);
-                        console.log(sectionName + " is no longer visible");
                     }
                 }
 
@@ -185,7 +204,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     document.addEventListener("scroll", setNavHighlights);
 
     function setNavHighlights() {
-        let lastVisibleSection = visibleSections[visibleSections.length - 1];
+
+        if (visibleSections.length === 3) {
+            lastVisibleSection = visibleSections[visibleSections.length - 2];
+        } else {
+            lastVisibleSection = visibleSections[visibleSections.length - 1];
+        }
+
 
         if (!navLinks[lastVisibleSection].classList.contains("nav__item--active")) {
             for (let i = 0; i < navLinks.length; i++) {
@@ -193,8 +218,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             }
             navLinks[lastVisibleSection].classList.add("nav__item--active");
         }
-
-        console.log(visibleSections);
     }
 });
 
