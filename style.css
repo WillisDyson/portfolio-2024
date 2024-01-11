@@ -805,6 +805,11 @@ body {
   font-size: 1.15rem;
   text-align: left;
   line-height: 1.75rem;
+  overflow: hidden;
+  transition: 1s;
+}
+.career-info__more-info-text--hidden {
+  max-height: 0 !important;
 }
 .career-info__icon {
   margin-left: 6px;
