@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav hidden">
         <div class="nav__wrap">
             <div aria-role="button" tabindex="0" class="nav__hamburger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
@@ -35,19 +35,21 @@
                 </svg>
             </div>
             <div class="nav__inner">
-                <a class="nav__item nav__item--active" href="">About me</a>
-                <a class="nav__item" href="">Skills and specialisations</a>
-                <a class="nav__item" href="">Career and education</a>
-                <a class="nav__item" href="">Open source contributions</a>
-                <a class="nav__item" href="">Social media</a>
-                <a class="nav__item" href="">Contact</a>
-                <a class="nav__item nav__item--cv" href="">Download my CV</a>
+                <a class="nav__item" href="#about">About me</a>
+                <a class="nav__item" href="#skills">Skills and specialisations</a>
+                <a class="nav__item" href="#career">Career and education</a>
+                <a class="nav__item" href="#work">Recent work</a>
+                <!-- <a class="nav__item" href="#opensource">Open source contributions</a> -->
+                <a class="nav__item" href="#socials">Social media</a>
+                <a class="nav__item" href="#contact">Contact</a>
+                <a class="nav__item nav__item--cv" href="/assets/WillisDyson-CV-2024.txt" download>Download my
+                    CV</a>
             </div>
         </div>
 
     </nav>
 
-    <header class="about-me" aria-label="About me">
+    <header id="about" class="about-me hidden section" aria-label="About me">
         <div class="about">
             <img class="about__img about-child" src="images/willis.png"
                 alt="Photograph of Willis. He has short brown hair, glasses, and short facial hair. He is wearing a green and white button-up shirt, in front of palm trees.">
@@ -62,7 +64,7 @@
                 <img class="about__flag" src="images/uk.png" alt="United Kingdom flag.">
             </div>
         </div>
-        <a class="more-info" href="">
+        <a class="more-info" href="#skills">
             <span class="more-info__text">Everything you need to know about me</span>
             <svg class="more-info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
                 <g transform="translate(-1.5 -1.5)">
@@ -77,7 +79,7 @@
         </a>
     </header>
 
-    <section class="skills-section" aria-label="Skills and specialisations">
+    <section id="skills" class="skills-section hidden section" aria-label="Skills and specialisations">
         <div class="skills">
             <h2 class="skills__heading heading-two">Skills and specialisations</h2>
             <div class="skill-cards">
@@ -216,17 +218,17 @@
 
     </section>
 
-    <section class="career" aria-label="Career and education">
+    <section id="career" class="career hidden section" aria-label="Career and education">
         <h2 class="career__heading heading-two">Career and education</h2>
 
 
         <div class="career-grid">
 
             <!-- Career item -->
-            <div class="career-grid__logo">
+            <div class="career-grid__logo career-child">
                 <img src="images/tcb.png" alt="TopCashback.">
             </div>
-            <div class="career-info">
+            <div class="career-info career-child">
                 <small class="career-info__location">Stafford, West Midlands, UK</small>
                 <h3 class="career-info__role">Front End Developer</h3>
                 <span class="career-info__duration">Current role since Feb. 2022</span>
@@ -238,25 +240,21 @@
                             transform="translate(-3.375 -3.375)" fill="#00cf6e" />
                     </svg>
                 </div>
-            </div>
-            <!-- Empty grid item -->
-            <div class="career-grid__blank" aria-role="presentation">
-            </div>
-            <!-- -->
-            <div class="career-grid__line-wrap" aria-role="presentation">
-                <!-- Vertical line -->
-                <div class="career-grid__line" aria-role="presentation">
+                <div class="career-grid__line-wrap" aria-role="presentation">
+                    <!-- Vertical line -->
+                    <div class="career-grid__line" aria-role="presentation">
+                    </div>
+                    <!-- -->
                 </div>
-                <!-- -->
             </div>
             <!-- -->
 
 
             <!-- Career item -->
-            <div class="career-grid__logo">
+            <div class="career-grid__logo career-child">
                 <img src="images/ebuyer.png" alt="Ebuyer.">
             </div>
-            <div class="career-info">
+            <div class="career-info career-child">
                 <small class="career-info__location">Howden, East Yorkshire, UK</small>
                 <h3 class="career-info__role">Web Designer/Developer</h3>
                 <span class="career-info__duration">May 2021 – Feb 2022</span>
@@ -268,24 +266,20 @@
                             transform="translate(-3.375 -3.375)" fill="#00cf6e" />
                     </svg>
                 </div>
-            </div>
-            <!-- Empty grid item -->
-            <div class="career-grid__blank" aria-role="presentation">
-            </div>
-            <!-- -->
-            <div class="career-grid__line-wrap" aria-role="presentation">
-                <!-- Vertical line -->
-                <div class="career-grid__line" aria-role="presentation">
+                <div class="career-grid__line-wrap" aria-role="presentation">
+                    <!-- Vertical line -->
+                    <div class="career-grid__line" aria-role="presentation">
+                    </div>
+                    <!-- -->
                 </div>
-                <!-- -->
             </div>
             <!-- -->
 
             <!-- Career item -->
-            <div class="career-grid__logo">
+            <div class="career-grid__logo career-child">
                 <img src="images/uoh.png" alt="University of Huddersfield.">
             </div>
-            <div class="career-info">
+            <div class="career-info career-child">
                 <small class="career-info__location">Huddersfield, West Yorkshire, UK</small>
                 <h3 class="career-info__role">1st Class Information & Communication Technology (BSc) Graduate</h3>
                 <span class="career-info__duration">May 2021</span>
@@ -297,24 +291,20 @@
                             transform="translate(-3.375 -3.375)" fill="#00cf6e" />
                     </svg>
                 </div>
-            </div>
-            <!-- Empty grid item -->
-            <div class="career-grid__blank" aria-role="presentation">
-            </div>
-            <!-- -->
-            <div class="career-grid__line-wrap" aria-role="presentation">
-                <!-- Vertical line -->
-                <div class="career-grid__line" aria-role="presentation">
+                <div class="career-grid__line-wrap" aria-role="presentation">
+                    <!-- Vertical line -->
+                    <div class="career-grid__line" aria-role="presentation">
+                    </div>
+                    <!-- -->
                 </div>
-                <!-- -->
             </div>
             <!-- -->
 
             <!-- Career item -->
-            <div class="career-grid__logo">
+            <div class="career-grid__logo career-child">
                 <img src="images/tcb.png" alt="TopCashback.">
             </div>
-            <div class="career-info">
+            <div class="career-info career-child">
                 <small class="career-info__location">Stafford, West Midlands, UK</small>
                 <h3 class="career-info__role">UX Designer (12 months internship)</h3>
                 <span class="career-info__duration">Current role since Feb. 2022</span>
@@ -326,23 +316,19 @@
                             transform="translate(-3.375 -3.375)" fill="#00cf6e" />
                     </svg>
                 </div>
-            </div>
-            <!-- Empty grid item -->
-            <div class="career-grid__blank" aria-role="presentation">
-            </div>
-            <!-- -->
-            <div class="career-grid__line-wrap" aria-role="presentation">
-                <!-- Vertical line -->
-                <div class="career-grid__line  career-grid__line--final" aria-role="presentation">
+                <div class="career-grid__line-wrap" aria-role="presentation">
+                    <!-- Vertical line -->
+                    <div class="career-grid__line career-grid__line--final" aria-role="presentation">
+                    </div>
+                    <!-- -->
                 </div>
-                <!-- -->
             </div>
             <!-- -->
 
 
     </section>
 
-    <section class="work-section" aria-label="Recent work">
+    <section id="work" class="work-section hidden section" aria-label="Recent work">
 
         <div class="work-wrap">
             <h2 class="heading-two">Recent work</h2>
@@ -427,7 +413,7 @@
 
     </section>
 
-    <section aria-label="Social media" class="socials">
+    <section id="socials" aria-label="Social media" class="socials hidden section">
         <h2 class="heading-two">Social media</h2>
         <div class="socials-grid">
 
@@ -464,7 +450,7 @@
         </div>
     </section>
 
-    <footer class="contact" aria-label="Contact">
+    <footer id="contact" class="contact hidden section" aria-label="Contact">
         <h2 class="contact__header heading-two">Contact</h2>
         <p class="contact__sub-text">Feel free to reach out via any of my social media platforms, or send an email to:
         </p>
