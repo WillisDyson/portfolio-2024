@@ -765,6 +765,12 @@ body {
         font-size: 1.15rem;
         text-align: left;
         line-height: 1.75rem;
+        overflow: hidden;
+        transition: 1s;
+
+        &--hidden {
+            max-height: 0 !important;
+        }
     }
 
     &__icon {

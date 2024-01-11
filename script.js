@@ -19,6 +19,31 @@ let visibleSections = [];
 let timeoutIsActive = false;
 let scrollTimeout;
 let lastVisibleSection;
+let allMoreInfoBtns = document.querySelectorAll(".career-info__more-info");
+let allMoreInfoText = document.querySelectorAll(".career-info__more-info-text");
+
+for (let i = 0; i < allMoreInfoBtns.length; i++) {
+    allMoreInfoBtns[i].addEventListener("click", handleMoreInfoClick);
+}
+
+function initDropdowns() {
+    for (let i = 0; i < allMoreInfoBtns.length; i++) {
+        allMoreInfoText[i].classList.remove("career-info__more-info-text--hidden");
+        allMoreInfoText[i].style.maxHeight = "unset";
+        let thisElemHeight = allMoreInfoText[i].offsetHeight;
+        allMoreInfoText[i].setAttribute("data-max-height", thisElemHeight);
+        let newMaxHeight = allMoreInfoText[i].getAttribute("data-max-height");
+        allMoreInfoText[i].style.maxHeight = newMaxHeight + "px";
+        allMoreInfoText[i].classList.add("career-info__more-info-text--hidden");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", initDropdowns);
+window.addEventListener("resize", initDropdowns);
+
+function handleMoreInfoClick() {
+    this.parentElement.querySelector(".career-info__more-info-text").classList.toggle("career-info__more-info-text--hidden");
+}
 
 document.addEventListener("scroll", (e) => {
     toggleNav();
