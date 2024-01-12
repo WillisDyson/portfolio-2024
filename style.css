@@ -913,6 +913,12 @@ body {
   text-decoration: none;
   opacity: 0;
   overflow: hidden;
+  position: relative;
+  top: 0;
+  transition: 0.3s;
+}
+.work-item:hover {
+  top: -10px;
 }
 .work-item--animate {
   animation-name: fadeIn;
@@ -924,9 +930,17 @@ body {
   }
 }
 .work-item__text-section {
+  background-color: #6E1BB7;
+  color: #FFFFFF;
+  padding: 16px 23px;
+}
+.work-item__text-section--ui {
+  background-color: #B71B1B;
+  color: #ffffff;
+}
+.work-item__text-section--a11y {
   background-color: #19A966;
   color: #ffffff;
-  padding: 16px 23px;
 }
 .work-item__label {
   font-size: 0.688rem;
@@ -943,7 +957,6 @@ body {
   }
 }
 .work-item__image {
-  background-image: url();
   height: 348px;
 }
 @media screen and (max-width: 600px) {
