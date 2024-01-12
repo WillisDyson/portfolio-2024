@@ -828,6 +828,13 @@ body {
     text-decoration: none;
     opacity: 0;
     overflow: hidden;
+    position: relative;
+    top: 0;
+    transition: 0.3s;
+
+    &:hover {
+        top: -10px;
+    }
 
     &--animate {
         animation-name: fadeIn;
@@ -839,9 +846,19 @@ body {
     }
 
     &__text-section {
-        background-color: #19A966;
-        color: #ffffff;
+        background-color: #6E1BB7;
+        color: #FFFFFF;
         padding: 16px 23px;
+
+        &--ui {
+            background-color: #B71B1B;
+            color: #ffffff;
+        }
+
+        &--a11y {
+            background-color: #19A966;
+            color: #ffffff;
+        }
     }
 
     &__label {
@@ -860,7 +877,6 @@ body {
     }
 
     &__image {
-        background-image: url();
         height: 348px;
 
         @media screen and (max-width: 600px) {
