@@ -223,6 +223,19 @@ body {
   }
 }
 
+.back {
+  border-bottom: 1px solid transparent;
+  color: #00CF6E;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.back__wrap {
+  padding: 87px 26px 0;
+}
+.back:hover {
+  border-bottom: 1px solid #00CF6E;
+}
+
 .about-me {
   padding-top: 67px;
   text-align: center;
@@ -245,6 +258,11 @@ body {
     width: 160px;
   }
 }
+.about__img--proj {
+  border-radius: unset;
+  height: unset;
+  width: unset;
+}
 .about__header, .about__sub-header {
   color: #CFCFCF;
   display: inline;
@@ -253,7 +271,7 @@ body {
   line-height: 3.68rem;
   margin: 0;
 }
-.about__header em, .about__sub-header em {
+.about__header em, .about__header--proj, .about__sub-header em, .about__sub-header--proj {
   color: #ffffff;
   font-style: normal;
   font-weight: 700;
@@ -276,6 +294,14 @@ body {
 @media screen and (max-width: 900px) {
   .about__upper {
     margin-bottom: 35px;
+  }
+}
+.about__upper--proj {
+  margin: 0 40px 0;
+}
+@media (max-width: 650px) {
+  .about__upper--proj {
+    margin: 0 26px 0;
   }
 }
 .about__hand, .about__flag {
@@ -319,6 +345,25 @@ body {
     top: 4px;
   }
 }
+.about--proj {
+  background-position: 50% 50%;
+  background-size: cover;
+  margin: 67px 0 0;
+  max-width: unset;
+  padding: 160px 0;
+}
+@media (max-width: 900px) {
+  .about--proj {
+    padding: 120px 0;
+    margin-bottom: 55px;
+  }
+}
+@media (max-width: 650px) {
+  .about--proj {
+    padding: 90px 0;
+    margin: 0;
+  }
+}
 
 .more-info {
   display: inline-block;
@@ -335,6 +380,9 @@ body {
   .more-info {
     margin: 0 auto 60px;
   }
+}
+.more-info--proj {
+  display: block;
 }
 .more-info__text {
   color: #00CF6E;
@@ -1131,4 +1179,132 @@ body {
     top: 8px;
     width: 32.5px;
   }
+}
+
+.proj-slice {
+  padding: 80px 40px 80px;
+}
+.proj-slice--alt {
+  background-color: #101010;
+}
+@media (max-width: 768px) {
+  .proj-slice {
+    padding: 40px 25px 40px;
+  }
+}
+.proj-slice__header {
+  color: #fff;
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin: 0 0 25px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .proj-slice__header {
+    font-size: 1.75rem;
+  }
+}
+.proj-slice__sub-header {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 25px;
+}
+@media (max-width: 768px) {
+  .proj-slice__sub-header {
+    font-size: 1.25rem;
+  }
+}
+.proj-slice__content-block {
+  color: #b4b4b4;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.proj-slice__content-block p,
+.proj-slice__content-block ul {
+  font-size: 1.2rem;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .proj-slice__content-block p,
+  .proj-slice__content-block ul {
+    font-size: 1rem;
+  }
+}
+.proj-slice__content-block p,
+.proj-slice__content-block small {
+  font-weight: 200;
+}
+.proj-slice__content-block ul {
+  color: #ffffff;
+  font-weight: 200;
+  margin: 0 0 26px;
+}
+.proj-slice__content-block ul li {
+  margin-bottom: 6px;
+}
+.proj-slice__content-block ul li:last-child {
+  margin-bottom: 0;
+}
+.proj-slice__image {
+  border-radius: 18px;
+  display: block;
+  margin: 40px auto 20px;
+  max-width: 100%;
+}
+.proj-slice__image--last {
+  margin: 20px auto 60px;
+}
+.proj-slice__link {
+  border-bottom: 1px solid transparent;
+  color: #00CF6E;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.proj-slice__link:hover {
+  border-bottom: 1px solid #00CF6E;
+}
+@media (max-width: 768px) {
+  .proj-slice__link {
+    font-size: 1rem;
+  }
+}
+.proj-slice--footer {
+  background-color: #19A966;
+  color: #ffffff;
+  text-align: center;
+}
+.proj-slice__return-button {
+  background-color: #ffffff;
+  border-radius: 999px;
+  color: #19A966;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  outline: 2px solid transparent;
+  padding: 5px 18px 7px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.proj-slice__return-button:hover {
+  background-color: #19A966;
+  color: #fff;
+  outline: 2px solid #ffffff;
+}
+@media (max-width: 768px) {
+  .proj-slice__return-button {
+    font-size: 1rem;
+    padding: 4px 14px 6px;
+  }
+}
+
+.temp-work-message {
+  align-items: center;
+  border-radius: 23px;
+  display: flex;
+  outline: 1px solid #fff;
+  text-align: center;
+  margin: 25px;
+  padding: 25px;
 }/*# sourceMappingURL=style.css.map */
