@@ -21,6 +21,9 @@ let scrollTimeout;
 let lastVisibleSection;
 let allMoreInfoBtns = document.querySelectorAll(".career-info__more-info");
 let allMoreInfoText = document.querySelectorAll(".career-info__more-info-text");
+let navOpenBtn = document.querySelector(".nav__hamburger");
+let navCloseBtn = document.querySelector(".nav__close");
+let mobNavMenu = document.querySelector(".nav__wrap");
 
 for (let i = 0; i < allMoreInfoBtns.length; i++) {
     allMoreInfoBtns[i].addEventListener("click", handleMoreInfoClick);
@@ -247,6 +250,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
+navOpenBtn.addEventListener("click", toggleMobNavMenu);
+navCloseBtn.addEventListener("click", toggleMobNavMenu);
 
+function toggleMobNavMenu() {
+    document.body.classList.toggle("prevent-scrolling");
+    mobNavMenu.classList.toggle("nav__wrap--retracted");
+}
 
 

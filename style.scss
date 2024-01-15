@@ -14,6 +14,10 @@ body {
     display: none;
 }
 
+.prevent-scrolling {
+    overflow-y: hidden;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -101,16 +105,13 @@ body {
 }
 
 .nav {
+    background-color: #363636;
     overflow: hidden;
     position: fixed;
     transition: 0.3s;
     top: 0;
     width: 100%;
     z-index: 99;
-
-    @media (min-width: 650px) {
-        background-color: #363636;
-    }
 
     @media (max-width: 650px) {
         position: static;
@@ -123,17 +124,6 @@ body {
     &__wrap {
         display: flex;
         height: 67px;
-    }
-
-    &__hamburger {
-        align-items: center;
-        align-self: center;
-        display: flex;
-        margin-left: 15px;
-
-        @media screen and (min-width: 650px) {
-            display: none;
-        }
     }
 
     &__inner {
@@ -155,7 +145,6 @@ body {
         }
 
         @media screen and (max-width: 650px) {
-            display: none;
             flex-direction: column;
             text-align: left;
         }
@@ -208,8 +197,67 @@ body {
         }
     }
 
-    @media screen and (max-width: 650px) {
-        height: 55px;
+    &__hamburger,
+    &__close {
+        display: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+    .nav {
+        display: flex;
+
+        &__wrap {
+            background-color: #000000;
+            display: block;
+            position: fixed;
+            height: 100%;
+            left: 0;
+            padding: 25px;
+            transition: 0.3s;
+            width: calc(100% - 50px);
+            z-index: 10;
+
+            &--retracted {
+                left: calc(-100% - 50px);
+            }
+        }
+
+        &__inner {
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        &__item {
+            display: inline-block;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            margin-right: auto;
+
+        }
+
+        &__hamburger {
+            align-items: center;
+            align-self: center;
+            display: flex;
+            margin: 25px;
+        }
+
+        &__close {
+            align-items: center;
+            align-self: center;
+            display: flex;
+            margin-left: 12px;
+
+            @media screen and (min-width: 650px) {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1151,7 +1199,7 @@ body {
             margin: 20px auto 60px;
         }
 
-        @media max-width(650px) {
+        @media (max-width: 650px) {
             border-radius: 10px;
         }
     }
