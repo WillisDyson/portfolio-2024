@@ -14,8 +14,10 @@ body {
   display: none;
 }
 
-.prevent-scrolling {
-  overflow-y: hidden;
+@media (max-width: 650px) {
+  .prevent-scrolling {
+    overflow-y: hidden;
+  }
 }
 
 @keyframes fadeIn {
@@ -47,6 +49,19 @@ body {
   50% {
     opacity: 1;
     top: -30px;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes waveMob {
+  0% {
+    top: 0;
+  }
+  50% {
+    opacity: 1;
+    top: -14px;
   }
   100% {
     top: 0;
@@ -120,18 +135,13 @@ body {
 }
 
 .nav {
-  background-color: #363636;
+  background-color: #1d1d1d;
   overflow: hidden;
   position: fixed;
   transition: 0.3s;
   top: 0;
   width: 100%;
   z-index: 99;
-}
-@media (max-width: 650px) {
-  .nav {
-    position: static;
-  }
 }
 .nav__hidden {
   top: -67px;
@@ -217,10 +227,10 @@ body {
     display: flex;
   }
   .nav__wrap {
-    background-color: #000000;
+    background-color: #1d1d1d;
     display: block;
     position: fixed;
-    height: 100%;
+    height: calc(100% - 50px);
     left: 0;
     padding: 25px;
     transition: 0.3s;
@@ -239,6 +249,9 @@ body {
     font-size: 1.3rem;
     margin-bottom: 20px;
     margin-right: auto;
+  }
+  .nav__item:last-child {
+    margin: auto auto 0 0;
   }
   .nav__hamburger {
     align-items: center;
@@ -274,11 +287,6 @@ body {
 .about-me {
   padding-top: 67px;
   text-align: center;
-}
-@media (max-width: 650px) {
-  .about-me {
-    padding-top: 0px;
-  }
 }
 
 .about__img {
@@ -390,13 +398,12 @@ body {
 @media (max-width: 900px) {
   .about--proj {
     padding: 120px 0;
-    margin-bottom: 55px;
   }
 }
 @media (max-width: 650px) {
   .about--proj {
     padding: 90px 0;
-    margin: 0;
+    margin: 67px 0 0;
   }
 }
 
@@ -1051,12 +1058,12 @@ body {
 .socials {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 100px 25px 100px;
+  padding: 100px 25px 110px;
   text-align: center;
 }
 @media screen and (max-width: 900px) {
   .socials {
-    padding: 60px 25px 60px;
+    padding: 60px 25px 70px;
   }
 }
 
@@ -1132,6 +1139,11 @@ body {
 .social-item--animate {
   animation-name: wave;
 }
+@media (max-width: 650px) {
+  .social-item--animate {
+    animation-name: waveMob;
+  }
+}
 @media screen and (max-width: 600px) {
   .social-item {
     margin-bottom: 45px;
@@ -1158,6 +1170,9 @@ body {
 }
 .social-item:hover {
   top: -7.5px;
+}
+.social-item:nth-child(3), .social-item:nth-child(4) {
+  margin-bottom: 0;
 }
 
 .contact {
@@ -1249,6 +1264,7 @@ body {
 @media (max-width: 650px) {
   .proj-slice__sub-header {
     font-size: 1.25rem;
+    margin: 0 0 16px;
   }
 }
 .proj-slice__content-block {
@@ -1289,7 +1305,12 @@ body {
   max-width: 100%;
 }
 .proj-slice__image--last {
-  margin: 20px auto 60px;
+  margin: 40px auto 60px;
+}
+@media (max-width: 650px) {
+  .proj-slice__image--last {
+    margin: 20px auto 40px;
+  }
 }
 @media (max-width: 650px) {
   .proj-slice__image {
@@ -1320,8 +1341,9 @@ body {
   background-color: #ffffff;
   border-radius: 999px;
   color: #19A966;
+  display: inline-block;
   font-size: 1.2rem;
-  margin: 0 auto;
+  margin: 50px auto 0;
   outline: 2px solid transparent;
   padding: 5px 18px 7px;
   text-decoration: none;
@@ -1347,4 +1369,11 @@ body {
   text-align: center;
   margin: 25px;
   padding: 25px;
+}
+
+.see-next__text {
+  border-bottom: solid 2px #2bb876;
+  color: #ffffff;
+  display: block;
+  padding: 0 25px 35px;
 }/*# sourceMappingURL=style.css.map */

@@ -15,7 +15,9 @@ body {
 }
 
 .prevent-scrolling {
-    overflow-y: hidden;
+    @media (max-width: 650px) {
+        overflow-y: hidden;
+    }
 }
 
 @keyframes fadeIn {
@@ -53,6 +55,22 @@ body {
     50% {
         opacity: 1;
         top: -30px;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes waveMob {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        opacity: 1;
+        top: -14px;
     }
 
     100% {
@@ -105,17 +123,13 @@ body {
 }
 
 .nav {
-    background-color: #363636;
+    background-color: #1d1d1d;
     overflow: hidden;
     position: fixed;
     transition: 0.3s;
     top: 0;
     width: 100%;
     z-index: 99;
-
-    @media (max-width: 650px) {
-        position: static;
-    }
 
     &__hidden {
         top: -67px;
@@ -213,10 +227,10 @@ body {
         display: flex;
 
         &__wrap {
-            background-color: #000000;
+            background-color: #1d1d1d;
             display: block;
             position: fixed;
-            height: 100%;
+            height: calc(100% - 50px);
             left: 0;
             padding: 25px;
             transition: 0.3s;
@@ -239,6 +253,9 @@ body {
             margin-bottom: 20px;
             margin-right: auto;
 
+            &:last-child {
+                margin: auto auto 0 0;
+            }
         }
 
         &__hamburger {
@@ -279,10 +296,6 @@ body {
 .about-me {
     padding-top: 67px;
     text-align: center;
-
-    @media (max-width: 650px) {
-        padding-top: 0px;
-    }
 }
 
 .about {
@@ -396,12 +409,11 @@ body {
 
         @media (max-width: 900px) {
             padding: 120px 0;
-            margin-bottom: 55px;
         }
 
         @media (max-width: 650px) {
             padding: 90px 0;
-            margin: 0;
+            margin: 67px 0 0;
         }
     }
 }
@@ -988,11 +1000,11 @@ body {
 .socials {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 25px 100px;
+    padding: 100px 25px 110px;
     text-align: center;
 
     @media screen and (max-width: 900px) {
-        padding: 60px 25px 60px;
+        padding: 60px 25px 70px;
     }
 }
 
@@ -1028,6 +1040,10 @@ body {
 
     &--animate {
         animation-name: wave;
+
+        @media (max-width: 650px) {
+            animation-name: waveMob;
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -1055,6 +1071,11 @@ body {
 
     &:hover {
         top: -7.5px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+        margin-bottom: 0;
     }
 }
 
@@ -1151,6 +1172,7 @@ body {
 
         @media (max-width: 650px) {
             font-size: 1.25rem;
+            margin: 0 0 16px;
         }
     }
 
@@ -1196,7 +1218,11 @@ body {
         max-width: 100%;
 
         &--last {
-            margin: 20px auto 60px;
+            margin: 40px auto 60px;
+
+            @media (max-width: 650px) {
+                margin: 20px auto 40px;
+            }
         }
 
         @media (max-width: 650px) {
@@ -1230,8 +1256,9 @@ body {
         background-color: #ffffff;
         border-radius: 999px;
         color: #19A966;
+        display: inline-block;
         font-size: 1.2rem;
-        margin: 0 auto;
+        margin: 50px auto 0;
         outline: 2px solid transparent;
         padding: 5px 18px 7px;
         text-decoration: none;
@@ -1258,4 +1285,13 @@ body {
     text-align: center;
     margin: 25px;
     padding: 25px;
+}
+
+.see-next {
+    &__text {
+        border-bottom: solid 2px #2bb876;
+        color: #ffffff;
+        display: block;
+        padding: 0 25px 35px;
+    }
 }

@@ -41,8 +41,18 @@ function initDropdowns() {
     }
 }
 
+let previousWidth = window.innerWidth;
+
 document.addEventListener("DOMContentLoaded", initDropdowns);
-window.addEventListener("resize", initDropdowns);
+window.addEventListener('resize', () => {
+    const currentWidth = window.innerWidth;
+
+    /* Accordion max-heights will only be recalculated if thw width of the page is resized, not the height. */
+    if (currentWidth !== previousWidth) {
+        initDropdowns();
+    }
+    previousWidth = currentWidth;
+});
 
 function handleMoreInfoClick() {
     this.parentElement.querySelector(".career-info__more-info-text").classList.toggle("career-info__more-info-text--hidden");
@@ -69,24 +79,26 @@ function handleAutoScroll() {
 function toggleNav() {
     newScrollPos = window.scrollY;
 
-    if (scrollTypeIs === "manual") {
-        if (newScrollPos >= 1000) {
-            if (newScrollPos > currentScrollPos) {
-                document.querySelector(".nav").classList.add("nav__hidden");
+    if (mobNavMenu.classList.contains("nav__wrap--retracted")) {
+        if (scrollTypeIs === "manual") {
+            if (newScrollPos >= 1000) {
+                if (newScrollPos > currentScrollPos) {
+                    document.querySelector(".nav").classList.add("nav__hidden");
+                } else {
+                    document.querySelector(".nav").classList.remove("nav__hidden");
+                }
             } else {
                 document.querySelector(".nav").classList.remove("nav__hidden");
             }
-        } else {
-            document.querySelector(".nav").classList.remove("nav__hidden");
+
+        } else if (scrollTypeIs !== "manual") {
+
+            if (!timeoutIsActive) {
+                timeoutIsActive = true;
+                scrollTimeout = setTimeout(handleAutoScroll, "2000");
+            }
+
         }
-
-    } else if (scrollTypeIs !== "manual") {
-
-        if (!timeoutIsActive) {
-            timeoutIsActive = true;
-            scrollTimeout = setTimeout(handleAutoScroll, "2000");
-        }
-
     }
 
     currentScrollPos = newScrollPos;
@@ -195,7 +207,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const sectionOpts = {
         root: null,
         rootMargin: '1px',
-        threshold: 0.2,
+        threshold: 0.5,
     };
 
     let visibleSections = [];
@@ -253,9 +265,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 navOpenBtn.addEventListener("click", toggleMobNavMenu);
 navCloseBtn.addEventListener("click", toggleMobNavMenu);
 
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", toggleMobNavMenu);
+}
+
 function toggleMobNavMenu() {
     document.body.classList.toggle("prevent-scrolling");
     mobNavMenu.classList.toggle("nav__wrap--retracted");
+    document.querySelector(".nav").classList.remove("nav__hidden");
 }
 
 
