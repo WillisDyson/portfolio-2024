@@ -25,29 +25,39 @@
 
 <body>
     <nav class="nav hidden">
-        <div class="nav__wrap">
-            <div aria-role="button" tabindex="0" class="nav__hamburger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
-                    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
-                        <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34" transform="translate(0 -2.053)"
-                            fill="none" stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="3" />
-                        <path id="Path_13" data-name="Path 13" d="M4.5,9H25.34" fill="none" stroke="#00cf6e"
+        <div aria-role="button" tabindex="0" class="nav__hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
+                <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
+                    <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34" transform="translate(0 -2.053)" fill="none"
+                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                    <path id="Path_13" data-name="Path 13" d="M4.5,9H25.34" fill="none" stroke="#00cf6e"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                    <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34" transform="translate(0 -4.106)" fill="none"
+                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                </g>
+            </svg>
+        </div>
+        <div class="nav__wrap nav__wrap--retracted">
+            <div aria-role="button" tabindex="0" class="nav__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.979" height="18.979" viewBox="0 0 18.979 18.979">
+                    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-5.431 -6.457)">
+                        <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34"
+                            transform="translate(-8.358 13.769) rotate(-45)" fill="none" stroke="#00cf6e"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
-                        <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34" transform="translate(0 -4.106)"
-                            fill="none" stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="3" />
+                        <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34"
+                            transform="translate(23.462 -13.695) rotate(45)" fill="none" stroke="#00cf6e"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
                     </g>
                 </svg>
+
             </div>
             <div class="nav__inner">
-                <a class="nav__item" href="index.html#about">About me</a>
-                <a class="nav__item" href="index.html#skills">Skills and specialisations</a>
-                <a class="nav__item" href="index.html#career">Career and education</a>
-                <a class="nav__item" href="index.html#work">Recent work</a>
-                <!-- <a class="nav__item" href="index.html#opensource">Open source contributions</a> -->
-                <a class="nav__item" href="index.html#socials">Social media</a>
-                <a class="nav__item" href="index.html#contact">Contact</a>
+                <a class="nav__item nav__item--active" href="#about">About me</a>
+                <a class="nav__item" href="#skills">Skills and specialisations</a>
+                <a class="nav__item" href="#career">Career and education</a>
+                <a class="nav__item" href="#work">Recent work</a>
+                <!-- <a class="nav__item" href="#opensource">Open source contributions</a> -->
+                <a class="nav__item" href="#contact">Social media & Contact</a>
                 <a class="nav__item nav__item--cv" href="/assets/WillisDyson-CV-2024.txt" download>Download my
                     CV</a>
             </div>
@@ -155,7 +165,8 @@
     </section>
 
     <footer class="hidden section proj-slice proj-slice--footer">
-        <h2 class="proj-slice__sub-header">See next</h2>
+        <h2 class="proj-slice__sub-header">See next:</h2>
+        <a href="index.html#about" class="see-next__text">TopCashback homepage offer redesign</a>
         <a href="index.html#about" class="proj-slice__return-button">Return to homepage</a>
     </footer>
 
