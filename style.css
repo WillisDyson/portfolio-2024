@@ -250,8 +250,11 @@ body {
     margin-bottom: 20px;
     margin-right: auto;
   }
+  .nav__item--cv {
+    margin: auto auto 20px 0;
+  }
   .nav__item:last-child {
-    margin: auto auto 0 0;
+    margin-bottom: 0;
   }
   .nav__hamburger {
     align-items: center;
