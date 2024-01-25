@@ -1,10 +1,12 @@
-const skillCards = document.querySelector(".skill-cards");
-const allSkillCards = document.querySelectorAll(".skill-card__wrap");
+const skillCards = document.querySelector(".skills__wrap");
+const allSkillCards = document.querySelectorAll(".skill-card");
 const careerGrid = document.querySelector(".career-grid");
 const workGrid = document.querySelector(".work-grid");
 const allWorkItems = document.querySelectorAll(".work-item");
 const socialGrid = document.querySelector(".socials-grid");
 const allSocialItems = document.querySelectorAll(".social-item");
+const certsGrid = document.querySelector(".certifs__inner-wrap");
+const allCerts = document.querySelectorAll(".certif");
 
 
 const skillsOpts = {
@@ -23,6 +25,15 @@ const cardsAnimCallback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             animateCards();
+        }
+    });
+};
+
+const certsAnimCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log("is intersecting");
+            animateCerts();
         }
     });
 };
@@ -55,18 +66,28 @@ const socialAnimCallback = (entries, observer) => {
 };
 
 const skillObserver = new IntersectionObserver(cardsAnimCallback, skillsOpts);
+const certsObserver = new IntersectionObserver(certsAnimCallback, skillsOpts);
 const careerObserver = new IntersectionObserver(careerAnimCallback, careerOpts);
 const workObserver = new IntersectionObserver(workAnimCallback, careerOpts);
 const socialObserver = new IntersectionObserver(socialAnimCallback, skillsOpts);
 
 skillObserver.observe(skillCards);
+certsObserver.observe(certsGrid);
 careerObserver.observe(careerGrid);
 workObserver.observe(workGrid);
 socialObserver.observe(socialGrid);
 
 function animateCards() {
     for (let i = 0; i < allSkillCards.length; i++) {
-        allSkillCards[i].classList.add("skill-card__wrap--animate");
+        allSkillCards[i].classList.add("skill-card--animate");
+    }
+}
+
+function animateCerts() {
+    console.log("animateCerts function running");
+    for (let i = 0; i < allCerts.length; i++) {
+        allCerts[i].classList.add("certif--animate");
+        console.log("looping and adding classes");
     }
 }
 

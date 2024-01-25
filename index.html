@@ -52,12 +52,12 @@
 
             </div>
             <div class="nav__inner">
-                <a class="nav__item nav__item--active" href="#about">About me</a>
-                <a class="nav__item" href="#skills">Skills and specialisations</a>
-                <a class="nav__item" href="#career">Career and education</a>
-                <a class="nav__item" href="#work">Recent work</a>
-                <!-- <a class="nav__item" href="#opensource">Open source contributions</a> -->
-                <a class="nav__item" href="#contact">Social media & Contact</a>
+                <a class="nav__item nav__item--active" href="#about">About</a>
+                <a class="nav__item" href="#skills">Skills</a>
+                <a class="nav__item" href="#certifs">Certifications</a>
+                <a class="nav__item" href="#career">Career & Education</a>
+                <a class="nav__item" href="#work">Projects</a>
+                <a class="nav__item" href="#contact">Social Media & Contact</a>
                 <a class="nav__item nav__item--cv" href="/assets/WillisDyson-CV-2024.pdf" download>Download my
                     CV</a>
             </div>
@@ -68,7 +68,7 @@
     <header id="about" class="about-me hidden section" aria-label="About me">
         <div class="about">
             <img class="about__img about-child" src="images/willis.png"
-                alt="Photograph of Willis. He has short brown hair, glasses, and short facial hair. He is wearing a green and white button-up shirt, in front of palm trees.">
+                alt="Photograph of Willis. He has short brown hair, glasses, and short facial hair. He is smiling while wearing a green and white button-up shirt, in front of palm trees.">
             <div class="about__upper about-child">
                 <h1 class="about__header">Hi, I'm <em>Willis</em></h1>
                 <img class="about__hand" src="images/wave.png" alt="Waving hand.">
@@ -96,153 +96,224 @@
         </a>
     </header>
 
-    <section id="skills" class="skills-section hidden section" aria-label="Skills and specialisations">
+    <section id="skills" class="skills-section hidden section" aria-label="Skills">
         <div class="skills">
-            <h2 class="skills__heading heading-two">Skills and specialisations</h2>
-            <div class="skill-cards">
+            <h2 class="skills__heading heading-two">Skills</h2>
+            <div class="skills__wrap">
 
-                <!-- Card 1 -->
-                <div class="skill-card__wrap">
-                    <div class="skill-card">
-                        <div class="skill-card__name-section skill-card__name-section--purple">
-                            <h3 class="skill-card__name">Front End Web Development</h3>
+                <div class="skill-card">
+                    <div class="skill-card__name-section">
+                        <div class="skill-card__highlight"></div>
+                        <h3 class="skill-card__name">Front End Web Development</h3>
+                    </div>
+                    <div class="skill-card__summary-section">
+                        <p class="skill-card__summary">Currently employed as a Front End Developer, with 3+ years of
+                            professional experience.</p>
+                    </div>
+                    <h4 class="skill-card__subtitle">Main skills</h4>
+                    <div class="skill-card__skills-section">
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/react.png">
+                            <span class="skill-card__skill-name">React</span>
                         </div>
-                        <div class="skill-card__info skill-card__info--top">
-                            <p class="skill-card__text">Currently employed as a Front End Developer, with 3+ years
-                                of
-                                professional
-                                experience.</p>
-                            <h4 class="skill-card__info-header skill-card__info-header--purple">Main skills</h4>
-                            <ul class="skill-card__skills-list">
-                                <li class="skill-card__skill">HTML, CSS (SCSS), JavaScript, React*</li>
-                                <li class="skill-card__skill">GIT, Agile (Scrum), Jira, BEM</li>
-                                <li class="skill-card__skill">JEST, BrowserStack</li>
-                            </ul>
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/sass.png">
+                            <span class="skill-card__skill-name">SASS (SCSS)</span>
                         </div>
-                        <div class="skill-card__info skill-card__info--bottom">
-                            <h4 class="skill-card__info-header skill-card__info-header--purple">Certifications</h4>
-                            <div class="certs__grid">
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/html.png">
+                            <span class="skill-card__skill-name">HTML</span>
+                        </div>
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/css.png">
+                            <span class="skill-card__skill-name">CSS</span>
+                        </div>
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/js.png">
+                            <span class="skill-card__skill-name">JavaScript</span>
+                        </div>
 
-                                <img class="certs__logo" src="images/logo-Meta.png" alt="Meta logo">
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/git.png">
+                            <span class="skill-card__skill-name">GIT</span>
+                        </div>
 
-                                <div class="certs__text">
-                                    <span class="certs__cert">In progress: Advanced React</span>
-                                    <span class="certs__provider">Meta</span>
-                                    <span class="certs__date">(Estimated Mar. 2024)</span>
-                                </div>
-
-                                <img class="certs__logo" src="images/logo-Meta.png" alt="Meta logo">
-
-                                <div class="certs__text">
-                                    <span class="certs__cert">React Basics</span>
-                                    <span class="certs__provider">Meta</span>
-                                    <span class="certs__date">(Jan. 2024)</span>
-                                </div>
-
-                                <img class="certs__logo" src="images/logo-Meta.png" alt="Meta logo">
-
-                                <div class="certs__text">
-                                    <span class="certs__cert">Programming with JavaScript</span>
-                                    <span class="certs__provider">Meta</span>
-                                    <span class="certs__date">(Nov. 2023)</span>
-                                </div>
-
-                                <img class="certs__logo" src="images/apmg.png" alt="APMG logo">
-
-                                <div class="certs__text">
-                                    <span class="certs__cert">AgilePM® Foundation</span>
-                                    <span class="certs__provider">APMG International</span>
-                                    <span class="certs__date">(Oct. 2022)</span>
-                                </div>
-                            </div>
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/jira.png">
+                            <span class="skill-card__skill-name">Jira</span>
+                        </div>
+                        <div class="skill-card__skill">
+                            <img class="skill-card__skill-img" alt="" src="images/browserstack.png">
+                            <span class="skill-card__skill-name">BrowserStack</span>
                         </div>
                     </div>
                 </div>
-                <!-- -->
 
-                <!-- Card 2 -->
-                <div class="skill-card__wrap">
-                    <div class="skill-card">
-                        <div class="skill-card__name-section skill-card__name-section--green">
-                            <h3 class="skill-card__name">Web Accessibility</h3>
-                        </div>
-                        <div class="skill-card__info skill-card__info--top">
-                            <p class="skill-card__text">I have specialised in and advocated for Web Accessibility
-                                throughout
-                                my career as a Developer, as it is a cause that is incredibly important to me.</p>
-                            <h4 class="skill-card__info-header skill-card__info-header--green">Main skills</h4>
-                            <ul class="skill-card__skills-list">
-                                <li class="skill-card__skill">Accessible-needs user research</li>
-                                <li class="skill-card__skill">Leading in-house training</li>
-                                <li class="skill-card__skill">Production of guides & documentation</li>
-                                <li class="skill-card__skill">W3C WCAGs fluency</li>
-                                <li class="skill-card__skill">Accessible development techniques &
-                                    design patterns</li>
-                            </ul>
-                        </div>
-                        <div class="skill-card__info skill-card__info--bottom">
-                            <h4 class="skill-card__info-header skill-card__info-header--green">Certifications</h4>
-                            <div class="certs__grid">
-                                <img class="certs__logo" src="images/w3c.png" alt="W3C logo">
-
-                                <div class="certs__text">
-                                    <span class="certs__cert">Web Accessibility Basics</span>
-                                    <span class="certs__provider">W3C</span>
-                                    <span class="certs__date">(Sep. 2023)</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="skill-card">
+                    <div class="skill-card__name-section">
+                        <div class="skill-card__highlight"></div>
+                        <h3 class="skill-card__name">Web Accessibility</h3>
                     </div>
-                </div>
-                <!-- -->
-
-                <!-- Card 3 -->
-                <div class="skill-card__wrap">
-                    <div class="skill-card">
-                        <div class="skill-card__name-section skill-card__name-section--red">
-                            <h3 class="skill-card__name">User Experience & UI Design</h3>
-                        </div>
-                        <div class="skill-card__info skill-card__info--top">
-                            <p class="skill-card__text">I have a strong UX/UI design background, with 2+ years of
-                                professional
-                                experience in these fields, alongside several years of part-time freelance work.</p>
-                            <h4 class="skill-card__info-header skill-card__info-header--red">Main skills</h4>
-                            <ul class="skill-card__skills-list">
-                                <li class="skill-card__skill">UI Design</li>
-                                <li class="skill-card__skill">User Research</li>
-                                <li class="skill-card__skill">UX Principles</li>
-                                <li class="skill-card__skill">Wireframing/Prototyping</li>
-                                <li class="skill-card__skill">A/B Testing</li>
-                                <li class="skill-card__skill">Data & Analytics</li>
-                            </ul>
-                        </div>
-                        <div class="skill-card__info skill-card__info--bottom">
-                            <h4 class="skill-card__info-header skill-card__info-header--red">Certifications</h4>
-                            <div class="certs__grid">
-
-                                <img class="certs__logo" src="images/google.png" alt="Google logo">
-
-                                <div class="certs__text">
-                                    <span class="certs__cert">Foundations of User Experience (UX) Design</span>
-                                    <span class="certs__provider">Google</span>
-                                    <span class="certs__date">(Aug. 2021)</span>
-                                </div>
-
-
-                            </div>
-                        </div>
+                    <div class="skill-card__summary-section">
+                        <p class="skill-card__summary">I have specialised in and advocated for Web Accessibility
+                            throughout my career as a Developer, as it is a cause that is
+                            incredibly important to me.</p>
                     </div>
+                    <h4 class="skill-card__subtitle">Main skills</h4>
+                    <ul class="skill-card__skills-list">
+                        <li class="skill-card__skill-listing">Accessible-needs user research</li>
+                        <li class="skill-card__skill-listing">Leading in-house training</li>
+                        <li class="skill-card__skill-listing">Production of guides &amp; documentation</li>
+                        <li class="skill-card__skill-listing">W3C WCAGs fluency</li>
+                        <li class="skill-card__skill-listing">Accessible development techniques &amp;
+                            design patterns</li>
+                    </ul>
                 </div>
+
+                <div class="skill-card">
+                    <div class="skill-card__name-section">
+                        <div class="skill-card__highlight"></div>
+                        <h3 class="skill-card__name">UX/UI Design</h3>
+                    </div>
+                    <div class="skill-card__summary-section">
+                        <p class="skill-card__summary">I have a strong UX/UI design background, with 2+ years of
+                            professional experience in these fields, alongside several
+                            years of part-time freelance work.</p>
+                    </div>
+                    <h4 class="skill-card__subtitle">Main skills</h4>
+                    <ul class="skill-card__skills-list">
+                        <li class="skill-card__skill-listing">UI Design</li>
+                        <li class="skill-card__skill-listing">User Research</li>
+                        <li class="skill-card__skill-listing">UX Principles</li>
+                        <li class="skill-card__skill-listing">Wireframing & Prototyping</li>
+                        <li class="skill-card__skill-listing">A/B Testing</li>
+                        <li class="skill-card__skill-listing">Data & Analytics</li>
+                        <li class="skill-card__skill-listing">Adobe XD, Adobe Photoshop, Figma</li>
+                    </ul>
+                </div>
+
+
             </div>
-            <!-- -->
-
         </div>
+
+    </section>
+
+    <section id="certifs" class="certifs hidden section" aria-label="Certifications">
+
+        <div class="certifs__wrap">
+            <h2 class="heading-two">Certifications</h2>
+            <div class="certifs__inner-wrap">
+
+                <a href="" class="certif certif--wip">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight certif__highlight--wip"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">Advanced React</h3>
+                                <span class="certif__provider">Meta</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>In progress</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="Meta logo" src="images/logo-Meta.png">
+                    </div>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/verify/F5ERDPRB6SEY" class="certif">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">React Basics</h3>
+                                <span class="certif__provider">Meta</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>Completed January 2024</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="Meta logo" src="images/logo-Meta.png">
+                    </div>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/verify/GN4LFM5RTS4C" class="certif">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">Programming with JavaScript</h3>
+                                <span class="certif__provider">Meta</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>Completed November 2023</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="Meta logo" src="images/logo-Meta.png">
+                    </div>
+                </a>
+                <a href="https://courses.edx.org/certificates/1921f1cc711447a3aeed6edf61508c12" class="certif">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">Introduction to Web Accessibility</h3>
+                                <span class="certif__provider">W3C</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>Completed September 2023</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="W3C logo" src="images/w3c-white.png">
+                    </div>
+                </a>
+                <a href="https://www.credly.com/badges/802c6142-fd3a-41a2-84dd-8196f056d8a7/public_url" class="certif">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">AgilePM® Foundation</h3>
+                                <span class="certif__provider">APMG</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>Completed October 2022</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="APMG logo" src="images/apmg-white.png">
+                    </div>
+                </a>
+                <a href="https://www.coursera.org/account/accomplishments/verify/8D5L6K7CWHL4" class="certif">
+                    <div class="certif__info">
+                        <div class="certif__name">
+                            <div class="certif__highlight"></div>
+                            <div class="certif__name-wrap">
+                                <h3 class="certif__course">Foundations of User Experience (UX) Design</h3>
+                                <span class="certif__provider">Meta</span>
+                            </div>
+                        </div>
+                        <div class="certif__date">
+                            <small>Completed August 2021</small>
+                        </div>
+                    </div>
+                    <div class="certif__logo">
+                        <img alt="Google logo" src="images/google.png">
+                    </div>
+                </a>
+
+            </div>
         </div>
 
     </section>
 
     <section id="career" class="career hidden section" aria-label="Career and education">
-        <h2 class="career__heading heading-two">Career and education</h2>
+        <h2 class="career__heading heading-two">Career & Education</h2>
 
 
         <div class="career-grid">
@@ -406,13 +477,14 @@
     <section id="work" class="work-section hidden section" aria-label="Recent work">
 
         <div class="work-wrap">
-            <h2 class="heading-two">Recent work</h2>
+            <h2 class="heading-two">Projects</h2>
 
             <div class="work-grid">
                 <!-- Grid item -->
                 <a class="work-item" href="brand-page-redesign.html">
                     <div class="work-item__text-section">
-                        <small class="work-item__label">Front End Web Development</small>
+                        <small class="work-item__label">Web Development</small>
+
                         <h3 class="work-item__project">TopCashback redesigned brand pages front end</h3>
                     </div>
                     <div style="background-image: url('images/merch-pages.png')" class="work-item__image"
@@ -423,8 +495,8 @@
                 <!-- -->
                 <!-- Grid item -->
                 <a class="work-item" href="homepage-redesign.html">
-                    <div class="work-item__text-section work-item__text-section--ui">
-                        <small class="work-item__label">UX/UI Design</small>
+                    <div class="work-item__text-section">
+                        <small class="work-item__label work-item__label--uxui">UX/UI</small>
                         <h3 class="work-item__project">TopCashback homepage offers redesign</h3>
                     </div>
                     <div style="background-image: url('images/homepage-improv.png')" class="work-item__image"
@@ -434,8 +506,8 @@
                 <!-- -->
                 <!-- Grid item -->
                 <a class="work-item" href="accessibility-checklist.html">
-                    <div class="work-item__text-section work-item__text-section--a11y">
-                        <small class="work-item__label">Web Accessibility</small>
+                    <div class="work-item__text-section ">
+                        <small class="work-item__label work-item__label--a11y">Accessibility</small>
                         <h3 class="work-item__project">Production of a design-phase accessibility compliance checklist
                         </h3>
                     </div>
@@ -447,7 +519,7 @@
                 <!-- Grid item -->
                 <a class="work-item" href="nav-redesign.html">
                     <div class="work-item__text-section">
-                        <small class="work-item__label">Front End Web Development</small>
+                        <small class="work-item__label">Web Development</small>
                         <h3 class="work-item__project">TopCashback sitewide navigation redesign front end</h3>
                     </div>
                     <div style="background-image: url('images/new-nav.png')" class="work-item__image"
@@ -463,7 +535,7 @@
     </section>
 
     <section id="socials" aria-label="Social media" class="socials hidden section">
-        <h2 class="heading-two">Social media</h2>
+        <h2 class="heading-two">Social Media</h2>
         <div class="socials-grid">
 
             <!-- Social item -->
