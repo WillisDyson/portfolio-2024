@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+
+
 }
 
 body {
@@ -8,6 +10,21 @@ body {
     font-family: "sofia-pro-soft", Arial, sans-serif;
     margin: 0;
     transition: 0.3s;
+
+    &::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #222222;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 6px solid transparent;
+        background-color: #646464;
+        border-radius: 999px;
+        background-clip: content-box;
+    }
 }
 
 .hidden {
@@ -516,222 +533,149 @@ body {
 
 .skills {
     margin: 0 auto;
-    max-width: 1150px;
+    max-width: 1300px;
     text-align: center;
+
+    h3 {
+        margin: 70px 0 30px;
+    }
 
     &__heading {
         padding: 0 25px;
     }
 }
 
-.skill-cards {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    padding: 0 25px;
 
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 50% 50%;
-        justify-content: left;
-        margin: 0 auto;
-        max-width: 650px;
-        padding: 0 17px;
-    }
-
-    @media screen and (max-width: 600px) {
-        grid-template-columns: 100%;
-    }
-}
 
 @for $i from 0 through 3 {
-    .skill-card__wrap:nth-child(#{$i + 1}) {
+    .skill-card:nth-child(#{$i + 1}) {
         animation-delay: (0.2 * $i) + s;
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
 }
 
-.skill-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    overflow: hidden;
-
+.skills {
     &__wrap {
         display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        max-width: 450px;
-        padding: 8px;
-        position: relative;
-        opacity: 0;
-        top: 30px;
+        justify-content: center;
+        padding: 0 15px;
 
-        &--animate {
-            animation-name: floatIn;
+        @media (max-width: 1050px) {
+            flex-wrap: wrap;
         }
     }
 
-    @media screen and (max-width: 1000px) {
-        border-radius: 14px;
-        max-width: 322px;
+}
+
+.skill-card {
+    background-color: #101010;
+    border-radius: 12px;
+    margin: 10px;
+    max-width: 350px;
+    opacity: 0;
+    padding: 35px 33px 45px 25px;
+    text-align: left;
+    width: 100%;
+
+    @media (max-width: 650px) {
+        padding: 22px 30px 32px 22px;
+    }
+
+    &--animate {
+        animation-name: floatIn;
+    }
+
+    &__highlight {
+        background-color: #00CF6E;
+        border-radius: 999px;
+        display: inline-block;
+        flex-shrink: 0;
+        height: 26px;
+        margin-right: 13px;
+        position: relative;
+        top: 5px;
+        width: 3px;
+
+        @media (max-width: 650px) {
+            height: 23px;
+        }
+    }
+
+    &__summary-section,
+    &__skills-section {
+        margin: 0 0 0 16px;
     }
 
     &__name-section {
-        padding: 26px;
-        text-align: left;
-
-        @media screen and (max-width: 1000px) {
-            padding: 18px;
-        }
-
-        &--purple {
-            background-color: #6E1BB7;
-        }
-
-        &--green {
-            background-color: #19A966;
-        }
-
-        &--red {
-            background-color: #B71B1B;
-        }
-
-        &--blue {
-            background-color: #1B59B7;
-        }
+        display: flex;
     }
 
     &__name {
-        font-size: 1.563rem;
-        font-weight: 700;
-        margin: 3px 0 0;
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0 !important;
 
-        @media screen and (max-width: 1000px) {
-            font-size: 1.2rem;
+        @media (max-width: 650px) {
+            font-size: 1.4rem;
         }
     }
 
-    &__info {
-        text-align: left;
-        padding: 0 26px;
+    &__summary {
+        color: #b4b4b4;
+        font-size: 1.2rem;
+        margin: 15px 0 25px;
 
-        &--top {
-            padding: 22px 26px 30px;
-
-            @media screen and (max-width: 1000px) {
-                padding: 12px 18px 20px;
-            }
-        }
-
-        &--bottom {
-            margin-top: auto;
-            padding: 0 26px 26px;
-
-            @media screen and (max-width: 1000px) {
-                padding: 0 18px 22px;
-            }
+        @media (max-width: 650px) {
+            font-size: 1rem;
         }
     }
 
-    &__info-header {
-        font-size: 0.875rem;
-        font-weight: 400;
-        margin: 0 0 8px;
-
-        @media screen and (max-width: 1000px) {
-            font-size: 0.8rem;
-            margin: 0 0 5px;
-        }
-
-        &--purple {
-            color: #6E1BB7;
-        }
-
-        &--green {
-            color: #1BB76E;
-        }
-
-        &--red {
-            color: #B71B1B;
-        }
-    }
-
-    &__skills-list {
-        margin: 0;
-        padding: 0 0 0 18px;
-    }
-
-    &__text {
-        color: #000000;
-        font-size: 1rem;
-        font-weight: 300;
-        margin-top: 0;
+    &__skills-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -10px -18px -10px -10px;
     }
 
     &__skill {
-        color: #000000;
-        font-size: 1rem;
-        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        width: 75px;
+    }
 
-        @media screen and (max-width: 1000px) {
+    &__skill-name {
+        font-size: 0.75rem;
+        margin: 10px 0 0;
+        text-align: center;
+        word-break: break-all;
+    }
+
+    &__skill-img {
+        border-radius: 4px;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__skills-list {
+        margin-top: -8px;
+    }
+
+    &__skill-listing {
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-bottom: 6px;
+
+        @media (max-width: 650px) {
             font-size: 1rem;
         }
-
-        &:last-child {
-            &:after {
-                display: none;
-            }
-        }
     }
 }
 
-.certs {
 
-    &__grid {
-        align-items: center;
-        display: grid;
-        row-gap: 12px;
-
-        @media screen and (max-width: 1000px) {
-            row-gap: 8px;
-        }
-    }
-
-    &__text {
-        color: #000000;
-        font-size: 0.875rem;
-        font-weight: 700;
-        grid-column-start: 2;
-        grid-column-end: 2;
-
-        @media screen and (max-width: 1000px) {
-            font-size: 0.8rem;
-        }
-    }
-
-    &__provider,
-    &__date {
-        font-weight: 300;
-    }
-
-    &__date {
-        color: #AEAEAE;
-    }
-
-    &__logo {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        padding-right: 15px;
-        width: 55px;
-
-        @media screen and (max-width: 1000px) {
-            padding-right: 10px;
-            width: 48px;
-        }
-    }
-}
 
 .career {
     max-width: 940px;
@@ -937,7 +881,7 @@ body {
 }
 
 .work-item {
-    background-color: #ffffff;
+    background-color: #2d2d2d;
     border-radius: 23px;
     margin: 25px;
     text-align: left;
@@ -962,30 +906,41 @@ body {
     }
 
     &__text-section {
-        background-color: #6E1BB7;
         color: #FFFFFF;
         padding: 16px 23px;
-
-        &--ui {
-            background-color: #B71B1B;
-            color: #ffffff;
-        }
-
-        &--a11y {
-            background-color: #19A966;
-            color: #ffffff;
-        }
     }
 
     &__label {
-        font-size: 0.688rem;
+        background-color: #E8793A;
+        border-radius: 999px;
+        display: inline-block;
+        font-size: 0.75rem;
         font-weight: 400;
+        margin-bottom: 6px;
+        margin-right: 8px;
+        padding: 1.5px 10px 2px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--a11y {
+            background-color: #2A88E5;
+        }
+
+        &--uxui {
+            background-color: #DA3B67;
+        }
+
+        &--react {
+            background-color: #E8793A;
+        }
     }
 
     &__project {
         font-size: 1.25rem;
         font-weight: 700;
-        margin: 5px 0 0;
+        margin: 2px 0 0;
 
         @media screen and (max-width: 600px) {
             font-size: 1rem;
@@ -1297,5 +1252,135 @@ body {
         color: #ffffff;
         display: block;
         padding: 0 25px 35px;
+    }
+}
+
+@for $i from 0 through 8 {
+    .certif:nth-child(#{$i + 1}) {
+        animation-delay: (0.25 * $i) + s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.certifs {
+    background-color: #191919;
+    text-align: center;
+    padding: 85px 25px 100px;
+
+
+
+    @media (max-width: 650px) {
+        padding: 50px 25px 60px;
+    }
+
+    &__inner-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+}
+
+.certif {
+    align-items: center;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    margin: 10px;
+    opacity: 0;
+    padding: 14px 18px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    transition: 0.3s;
+    width: 100%;
+
+    &--animate {
+        animation-name: fadeIn;
+    }
+
+    &:hover {
+        top: -8px;
+    }
+
+    &--wip {
+        &:hover {
+            cursor: not-allowed;
+            top: 0;
+        }
+    }
+
+    &__highlight {
+        align-self: start;
+        background-color: #00CF6E;
+        border-radius: 999px;
+        height: 10px;
+        flex-shrink: 0;
+        margin-right: 10px;
+        position: relative;
+        top: 12.5px;
+        width: 10px;
+
+        &--wip {
+            background-color: #ffee00;
+        }
+
+        @media (max-width: 650px) {
+            top: 10px;
+        }
+    }
+
+    &__name {
+        align-items: center;
+        display: flex;
+        text-align: left;
+    }
+
+    &__course {
+        display: inline;
+        font-size: 1.5rem;
+        margin: 0 7.5px 0 0;
+        text-align: left;
+
+        @media (max-width: 650px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__provider {
+        color: #aeaeae;
+        display: inline;
+        font-size: 1.5rem;
+
+        @media (max-width: 650px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__date {
+        color: #aeaeae;
+        font-size: 1.15rem;
+        margin-left: 20px;
+        text-align: left;
+
+        @media (max-width: 650px) {
+            font-size: 0.85rem;
+        }
+    }
+
+    &__logo {
+        align-items: center;
+        display: flex;
+        margin-left: auto;
+
+        img {
+            flex-shrink: 0;
+            max-width: 100%;
+            min-width: 54px;
+        }
     }
 }
