@@ -578,11 +578,12 @@ body::-webkit-scrollbar-thumb {
   height: 26px;
   margin-right: 13px;
   position: relative;
-  top: 5px;
+  top: 9px;
   width: 3px;
 }
 @media (max-width: 650px) {
   .skill-card__highlight {
+    top: 5px;
     height: 23px;
   }
 }
