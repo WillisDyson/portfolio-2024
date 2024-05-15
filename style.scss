@@ -841,6 +841,17 @@ body {
     }
 }
 
+.work-vid {
+    height: 400px;
+    margin: 0 25px 75px;
+    max-width: 854px;
+    width: 90%;
+
+    @media (max-width: 500px) {
+        height: 280px;
+    }
+}
+
 .work-section {
     background-color: #191919;
     text-align: center;
