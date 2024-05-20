@@ -1,0 +1,150 @@
+<!-- 
+  Copyright © Willis John Dyson, 2024. All rights reserved. 
+  The code in this file is the property of Willis John Dyson and is not licensed or authorised for use, modification, or distribution.
+  Unauthorised use or reproduction of this code is strictly prohibited.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Redesign as React SPA | Willis Dyson Portfolio</title>
+    <meta name="description"
+        content="A large project that I am currently working on, where I am to completely convert my static portfolio website into a fully fledged React single-page application.">
+    <meta property='og:title' content='Portfolio Redesign as React SPA | Willis Dyson Portfolio' />
+    <meta property='og:image' content='https://willisdyson.co.uk/images/share-img.png' />
+    <meta property='og:description'
+        content="A large project that I am currently working on, where I am to completely convert my static portfolio website into a fully fledged React single-page application." />
+    <meta property='og:url' content='https://willisdyson.co.uk/react-portfolio' />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/vnu2nqk.css">
+</head>
+
+<body>
+    <nav class="nav hidden">
+        <div aria-role="button" tabindex="0" class="nav__hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23.84" height="16.894" viewBox="0 0 23.84 16.894">
+                <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-3 -7.5)">
+                    <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34" transform="translate(0 -2.053)" fill="none"
+                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                    <path id="Path_13" data-name="Path 13" d="M4.5,9H25.34" fill="none" stroke="#00cf6e"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                    <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34" transform="translate(0 -4.106)" fill="none"
+                        stroke="#00cf6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                </g>
+            </svg>
+        </div>
+        <div class="nav__wrap nav__wrap--retracted">
+            <div aria-role="button" tabindex="0" class="nav__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.979" height="18.979" viewBox="0 0 18.979 18.979">
+                    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-5.431 -6.457)">
+                        <path id="Path_12" data-name="Path 12" d="M4.5,18H25.34"
+                            transform="translate(-8.358 13.769) rotate(-45)" fill="none" stroke="#00cf6e"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                        <path id="Path_14" data-name="Path 14" d="M4.5,27H25.34"
+                            transform="translate(23.462 -13.695) rotate(45)" fill="none" stroke="#00cf6e"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                    </g>
+                </svg>
+
+            </div>
+            <div class="nav__inner">
+                <a href="index.html#about" class="nav__item nav__item--cv">Back to home</a>
+                <a class="nav__item" href="index.html#about">About</a>
+                <a class="nav__item" href="index.html#skills">Skills</a>
+                <a class="nav__item" href="index.html#certifs">Certifications</a>
+                <a class="nav__item" href="index.html#career">Career & Education</a>
+                <a class="nav__item" href="index.html#work">Projects</a>
+                <a class="nav__item" href="index.html#contact">Social Media & Contact</a>
+            </div>
+        </div>
+
+    </nav>
+    <header class="hidden section" aria-label="Project header">
+        <div class="about about--proj" style="background-image: url(images/react-portfolio-bg.png)">
+            <div class="about__upper about__upper--proj about-child">
+                <h1 class="about__header about__header--proj">Portfolio Redesign as React SPA
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="hidden section proj-slice" aria-label="Project introduction">
+        <h2 class="proj-slice__header">Project introduction</h2>
+        <div class="proj-slice__content-block">
+            <p>A large project that I am currently working on, where I am to completely convert my static portfolio
+                website into a
+                fully fledged React single-page application.
+            </p>
+            <small style="display: block; margin: 12px 0 20px;">Progress is still ongoing and isn't hosted online yet. I
+                am happy to provide a live preview upon request.</small>
+            <a class="proj-slice__link" href="https://github.com/WillisDyson/portfolio-rebuild-as-react-app">See ongoing
+                progress on GitHub</a>
+        </div>
+
+
+    </section>
+    <section class="hidden section proj-slice proj-slice--alt">
+        <h2 class="proj-slice__header">Project aims:</h2>
+        <div class="proj-slice__content-block">
+            <ul>
+                <li>Completely rebuild existing static portfolio as a React SPA.</li>
+                <li>Incorporate dynamic rendering and reusability of components.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="hidden section proj-slice">
+        <h2 class="proj-slice__header">Project progress so far (as of 20th May 2024)</h2>
+        <div class="proj-slice__content-block">
+            <ul>
+                <li>Converted navigation system into dynamic component and sub-components.</li>
+                <li>Set up dynamic image sourcing using createContext React hook, and wrapping all components inside.
+                </li>
+                <li>Created dynamic components and sub-components for hero, skills, certifications and career slices
+                    respectively.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="hidden section proj-slice proj-slice--alt">
+        <div class="proj-slice__content-block">
+            <img class="proj-slice__image proj-slice__image--last"
+                alt="Image showing progress of React Portfolio Rebuild" src="images/react-portfolio-1.png">#
+            <img class="proj-slice__image proj-slice__image--last"
+                alt="Image showing progress of React Portfolio Rebuild" src="images/react-portfolio-2.png">
+            <img class="proj-slice__image proj-slice__image--last"
+                alt="Image showing progress of React Portfolio Rebuild" src="images/react-portfolio-3.png">
+            <img class="proj-slice__image proj-slice__image--last"
+                alt="Image showing progress of React Portfolio Rebuild" src="images/react-portfolio-4.png">
+        </div>
+
+
+    </section>
+
+    <section class="hidden section proj-slice">
+        <h2 class="proj-slice__header">Roadmap for the rest of the project</h2>
+        <div class="proj-slice__content-block">
+            <ul>
+                <li>Continue refactoring existing sections into dynamic components.</li>
+                <li>Make sidewide JS local to its respective components.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer class="hidden section proj-slice proj-slice--footer">
+        <h2 class="proj-slice__sub-header">See next:</h2>
+        <a href="react-movies.html" class="see-next__text">React movies search using TMDB API, Dotenv and
+            Webpack</a>
+        <a href="index.html#about" class="proj-slice__return-button">Return to homepage</a>
+    </footer>
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>

@@ -9,21 +9,21 @@ function makeElemsVisible() {
     }
 }
 
-const navBar = document.querySelector(".nav");
 let currentScrollPos = window.scrollY;
 let newScrollPos;
 let scrollTypeIs = "manual";
-let navLinks = document.querySelectorAll('.nav__item');
-let sections = document.querySelectorAll('.section');
 let visibleSections = [];
 let timeoutIsActive = false;
 let scrollTimeout;
 let lastVisibleSection;
-let allMoreInfoBtns = document.querySelectorAll(".career-info__more-info");
-let allMoreInfoText = document.querySelectorAll(".career-info__more-info-text");
-let navOpenBtn = document.querySelector(".nav__hamburger");
-let navCloseBtn = document.querySelector(".nav__close");
-let mobNavMenu = document.querySelector(".nav__wrap");
+const navBar = document.querySelector(".nav");
+const navLinks = document.querySelectorAll('.nav__item');
+const sections = document.querySelectorAll('.section');
+const allMoreInfoBtns = document.querySelectorAll(".career-info__more-info");
+const allMoreInfoText = document.querySelectorAll(".career-info__more-info-text");
+const navOpenBtn = document.querySelector(".nav__hamburger");
+const navCloseBtn = document.querySelector(".nav__close");
+const mobNavMenu = document.querySelector(".nav__wrap");
 
 for (let i = 0; i < allMoreInfoBtns.length; i++) {
     allMoreInfoBtns[i].addEventListener("click", handleMoreInfoClick);

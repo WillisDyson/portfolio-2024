@@ -895,6 +895,8 @@ body {
 .work-item {
     background-color: #2d2d2d;
     border-radius: 23px;
+    display: flex;
+    flex-direction: column;
     margin: 25px;
     text-align: left;
     text-decoration: none;
@@ -945,7 +947,15 @@ body {
         }
 
         &--react {
-            background-color: #E8793A;
+            background-color: #843ae8;
+        }
+
+        &--api {
+            background-color: #e83a3a;
+        }
+
+        &--wip {
+            background-color: #747474;
         }
     }
 
@@ -960,7 +970,10 @@ body {
     }
 
     &__image {
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 348px;
+        margin-top: auto;
 
         @media screen and (max-width: 600px) {
             height: 244px;
