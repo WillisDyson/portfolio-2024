@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const sectionOpts = {
         root: null,
         rootMargin: '1px',
-        threshold: 0.5,
+        threshold: 0.2,
     };
 
     let visibleSections = [];
@@ -152,17 +152,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const sectionObserver = new IntersectionObserver(createSectionCallback(sectionName), sectionOpts);
         sectionCallbacks[sectionName] = createSectionCallback(sectionName);
         sectionObserver.observe(sections[i]);
+        console.log("observer set up for: " + sections[i]);
     }
 
     document.addEventListener("scroll", setNavHighlights);
 
     function setNavHighlights() {
 
+
         if (visibleSections.length === 3) {
             lastVisibleSection = visibleSections[visibleSections.length - 2];
         } else {
             lastVisibleSection = visibleSections[visibleSections.length - 1];
         }
+
+        console.log(visibleSections);
 
 
         if (!navLinks[lastVisibleSection].classList.contains("nav__item--active")) {
