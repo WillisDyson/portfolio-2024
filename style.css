@@ -1047,7 +1047,7 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 33.333% 33.333% 33.333%;
 }
 @media screen and (max-width: 600px) {
   .socials-grid {
