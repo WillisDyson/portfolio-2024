@@ -852,10 +852,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .work-vid {
+  border-radius: 23px;
   height: 400px;
-  margin: 0 25px 75px;
+  margin: 0 0 50px;
   max-width: 854px;
   width: 90%;
+}
+@media (max-width: 900px) {
+  .work-vid {
+    margin: 0 0 12.5px;
+  }
 }
 @media (max-width: 500px) {
   .work-vid {
