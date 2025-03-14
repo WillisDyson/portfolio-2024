@@ -1518,6 +1518,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   display: flex;
   margin-left: auto;
+  padding-left: 5px;
 }
 .certif__logo img {
   flex-shrink: 0;
