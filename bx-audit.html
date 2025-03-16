@@ -14,7 +14,8 @@
     <title>Browser Extension Web Accessibility Audit – TopCashback | Willis Dyson Portfolio</title>
     <meta name="description"
         content="A full Web Accessibility Audit of TopCashback's browser extension against WCAG 2.2, including a detailed report of all accessibility issues found and how they can be fixed." />
-    <meta property='og:title' content='Browser Extension Web Accessibility Audit – TopCashback | Willis Dyson Portfolio' />
+    <meta property='og:title'
+        content='Browser Extension Web Accessibility Audit – TopCashback | Willis Dyson Portfolio' />
     <meta property='og:image' content='https://willisdyson.pages.dev/images/share-img.png' />
     <meta property='og:description'
         content="A full Web Accessibility Audit of TopCashback's browser extension against WCAG 2.2, including a detailed report of all accessibility issues found and how they can be fixed." />
@@ -66,9 +67,10 @@
 
     </nav>
     <header class="hidden section" aria-label="Project header">
-        <div class="about about--proj" style="background-image: url(images/proj1-bg.png)">
+        <div class="about about--proj" style="background-image: url(images/audit-header.png)">
             <div class="about__upper about__upper--proj about-child">
-                <h1 class="about__header about__header--proj">Browser Extension Web Accessibility Audit – TopCashback</h1>
+                <h1 class="about__header about__header--proj">Browser Extension Web Accessibility Audit – TopCashback
+                </h1>
             </div>
         </div>
     </header>
@@ -76,7 +78,10 @@
     <section class="hidden section proj-slice" aria-label="Project introduction">
         <h2 class="proj-slice__header">Project introduction</h2>
         <div class="proj-slice__content-block">
-            <p>A full Web Accessibility Audit of TopCashback's browser extension against WCAG 2.2, including a detailed report of all accessibility issues found and how they can be fixed.</p>
+            <p>Spearheaded a full Web Accessibility Audit of TopCashback's Chrome Browser Extension against WCAG 2.2 AA,
+                including a detailed report of all accessibility issues found and how they can be fixed.</p>
+            <p>This is one small example of the many accessibility audit reports I have completed throughout my career.
+            </p>
         </div>
 
 
@@ -85,84 +90,942 @@
         <h2 class="proj-slice__header">My roles within the project:</h2>
         <div class="proj-slice__content-block">
             <ul>
-                <li>Translated static UI Designs
-                    into functional prototypes for testing.</li>
-                <li>Worked closely with Design/UX team to make small UI tweaks and iron out any usability issues.</li>
-                <li>Provided feedback to help inform design decisions, such as suggestions to enable accessibility and
-                    ideas for small "delights" to improve the visual quality of the page, such as animations and hover
-                    effects.
+                <li>Initiated the audit as part of a wider Accessibility project that I was leading.</li>
+                <li>Gained valuable insights through subsidised user surveys and heatmapping.</li>
+                <li>Ran a user testing session with accessible-needs users, which helped to reveal many problem areas.
                 </li>
-                <li>Produced the production version of the front end alongside other developers, working closely and
-                    being on hand to advise and help resolve any issues.</li>
-                <li>Actively involved in code reviews to ensure all front end code was efficiently written and
-                    accessibility-friendly.</li>
-                <li>Performed frequent cross-device and cross-browser functional testing to identify any bugs.</li>
-                <li>Ensured that all work was documented thoroughly and that all written communications were clear and
-                    direct.</li>
+                <li>Performed robust testing (manual/automated) with a variety of screen readers
+                    (NVDA/TalkBack/VoiceOver), as well as various other accessibility tools, in order to consolidate my
+                    findings.</li>
+                <li>Produced a document outlining each issue ranked by severity, with a suggested fix in order to ensure
+                    WCAG 2.2 AA compliance.</li>
             </ul>
-            <small>Note: Although I helped to inform many design decisions, TopCashback's Design/UX team were
-                responsible
-                for
-                the vast majority of the user interface designs produced as part of this project.</small>
         </div>
 
 
     </section>
 
     <section class="hidden section proj-slice">
-        <h2 class="proj-slice__header">Legacy brand pages</h2>
+        <h2 class="proj-slice__header">Problem statement</h2>
         <div class="proj-slice__content-block">
-            <img class="proj-slice__image proj-slice__image--last"
-                alt="An example of the legacy TopCashback brand pages" src="images/old-merch-example.png">
-            <h3 class="proj-slice__sub-header">Problems</h3>
-            <ul>
-                <li>Very outdated design, with sharp edges and design/layout inconsistencies.</li>
-                <li>Lots of visual clutter with very limited white space.</li>
-                <li>Obsolete sidebar full of unnecessary distractions.</li>
-                <li>Confusing cashback activation user journey, with multiple buttons often all doing the same thing.
-                </li>
-                <li>Missed opportunities for unified branding within page content.</li>
-                <li>No true responsiveness between desktop and mobile widths.</li>
-                <li>Many accessibility problems.</li>
-            </ul>
+            <p>
+                TopCashback's Browser Extension already has several known accessibility issues, which have been
+                identified on the back of user feedback. With the upcoming European Accessibility Act (EAA) coming into
+                effect in 2025, it is imperative that we first run a full audit of the extension to identify all
+                accessibility issues, and then fix them in order to ensure WCAG 2.2 AA compliance as a minimum.
+            </p>
         </div>
-
-
     </section>
 
     <section class="hidden section proj-slice proj-slice--alt">
-        <h2 class="proj-slice__header">New brand pages</h2>
+        <h2 class="proj-slice__header">Devices, browsers and testing tools</h2>
         <div class="proj-slice__content-block">
-            <img class="proj-slice__image" alt="The new TopCashback brand pages" src="images/new-merch-1.png">
-            <img class="proj-slice__image proj-slice__image--last" alt="An example of the legacy brand pages"
-                src="images/new-merch-2.png">
-            <h3 class="proj-slice__sub-header">Improvements</h3>
             <ul>
-                <li>Modernised design, with frequent use of rounded corners, softer colours/fonts and use of animations.
-                </li>
-                <li>Greatly reduced visual clutter.</li>
-                <li>Increased white space to allow easier visual focus on core elements and CTAs.</li>
-                <li>Just one "Get cashback" button, data-proven to reduce user confusion greatly.
-                </li>
-                <li>Up to date with the latest branding colours, fonts and styles. Has a much more unified brand feel.
-                </li>
-                <li>Complete page responsiveness between desktop and mobile widths.</li>
-                <li>Greatly increased accessibility for accessible-needs users – all content is now fully accessibile
-                    to screen reader and keyboard-only users.
-                </li>
-                <li>Plus many more improvements.</li>
+                <li>Dell XPS 15 9560 Laptop (Windows 10, Chrome, Firefox, Microsoft Edge, NVDA)</li>
+                <li>Apple MacBook Air 13.6" (macOS 15 Sequoia, Safari, Firefox, NVDA, VoiceOver)</li>
             </ul>
-            <a class="proj-slice__link" href="https://www.topcashback.co.uk/lookfantastic/">See the new brand pages live
-                (requires a TopCashback
-                account to see the full page)</a>
+        </div>
+    </section>
+
+    <section class="hidden section proj-slice proj-slice">
+        <h2 class="proj-slice__header">Browser extension images</h2>
+        <div class="proj-slice__content-block">
+            <img class="proj-slice__image"
+                alt="First example image: 'Activate cashback in one click', with the 'Get Cashback' pop-up when you visit a retailer."
+                src="images/bx-1.jpg">
+            <img class="proj-slice__image"
+                alt="Second example image: 'Cashback is active, make a purchase', with the 'Cashback activated' message."
+                src="images/bx-2.png">
+            <img class="proj-slice__image"
+                alt="Third example image: 'Automatically applies vouchers', with the loading bar which shows while the extension is applying vouchers."
+                src="images/bx-3.png">
+        </div>
+    </section>
+    <section class="hidden section proj-slice  proj-slice--alt">
+        <h2 class="proj-slice__header">Problems identified and recommended remediations</h2>
+        <div class="proj-slice__content-block">
+            <h3 class="proj-slice__sub-header">Critical priority</h3>
+            <!-- <table>
+                <tr>
+                    <th align="left">
+                        Problem
+                    </th>
+                    <th align="left">
+                        Description
+                    </th>
+                    <th align="left">
+                        WCAG(s)
+                    </th>
+                    <th align="left">
+                        Remediation
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        All buttons and many links are inaccessible to several types of accessible-needs user.
+                    </td>
+                    <td>
+                        In many cases, buttons are not keyboard-accessible. They cannot be highlighted or selected using
+                        the keyboard, and have no additional information describing that they are buttons, that they are
+                        clickable, and what they.
+                    </td>
+                    <td>
+                        2.1.1<br>
+                        2.4.3<br>
+                        2.4.7<br>
+                        4.1.2
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                Add &nbsp;<code>tabindex=”0”</code>&nbsp; to all buttons to make them
+                                keyboard-selectable.
+                            </li>
+                            <li>
+                                Ensure that the button receive a black outline
+                                (&nbsp;<code>outline: 2px solid #000</code>&nbsp;) when selected with the keyboard. This
+                                outline should not appear when clicking on the buttons.
+                            </li>
+                            <li>
+                                Add &nbsp;<code>role="button"</code>&nbsp; to all buttons to signify that they are
+                                clickable.
+                            </li>
+                            <li>
+                                Replicate any click functionality with for &nbsp;<code>keyup</code>&nbsp; events, only
+                                for the ENTER and SPACE keys.
+                            </li>
+                            <li>
+                                Any external link, such offers under the “Best deals” section, should ideally use
+                                &nbsp;<code>&lt;a&gt;</code>&nbsp; elements with a href attribute, instead of being
+                                clickable &nbsp;<code>&lt;div&gt;</code>&nbsp;elements.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table> -->
+
+            <!-- Mobile responsive tables -->
+            <table>
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>All buttons and many links are inaccessible to several types of accessible-needs user.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>In many cases, buttons are not keyboard-accessible. They cannot be highlighted or selected
+                        using the keyboard, and have no additional information describing that they are buttons,
+                        that they are clickable, and what they.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>2.1.1<br>2.4.3<br>2.4.7<br>4.1.2</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>
+                        <ul>
+                            <li>Add &nbsp;<code>tabindex=”0”</code>&nbsp; to all buttons to make them
+                                keyboard-selectable.</li>
+                            <li>Ensure that the button receive a black outline
+                                (&nbsp;<code>outline: 2px solid #000</code>&nbsp;) when selected with the keyboard.
+                                This outline should not appear when clicking on the buttons.</li>
+                            <li>Add &nbsp;<code>role="button"</code>&nbsp; to all buttons to signify that they are
+                                clickable.</li>
+                            <li>Replicate any click functionality with for &nbsp;<code>keyup</code>&nbsp; events,
+                                only for the ENTER and SPACE keys.</li>
+                            <li>Any external link, such offers under the “Best deals” section, should ideally use
+                                &nbsp;<code>&lt;a&gt;</code>&nbsp; elements with a href attribute, instead of being
+                                clickable &nbsp;<code>&lt;div&gt;</code>&nbsp;elements.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
         </div>
 
+        <div class="proj-slice__content-block" style="margin-top: 50px;">
+            <h3 class="proj-slice__sub-header">High priority</h3>
+            <!-- <table>
+                <tr>
+                    <th align="left">
+                        Problem
+                    </th>
+                    <th align="left">
+                        Description
+                    </th>
+                    <th align="left">
+                        WCAG(s)
+                    </th>
+                    <th align="left">
+                        Remediation
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Issues relating to keyboard focus
+                    </td>
+                    <td>
+                        Keyboard-only (and similar) users need to tab through the entire webpage to be able to get
+                        keyboard focus on the BX pop-up.
+                    </td>
+                    <td>
+                        2.1.1<br>
+                        2.4.1
+                    </td>
+                    <td>
+                        "Skip to extension" button to be added at the top of the page, which will allow users to skip
+                        directly to the BX pop-up. This link should only appear when the user presses the TAB key before
+                        any other input.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Inaccessible at high zoom levels
+                    </td>
+                    <td>
+                        At zoom levels of over 125% (may vary depending on device), the BX pop-up gets cut off. No
+                        scrollbar appears, meaning there is no way to see the content below the screen.
+                    </td>
+                    <td>
+                        1.4.4
+                    </td>
+                    <td>
+                        Scrollbar to appear when content is cropped. BX should be fully usable up to 200% zoom according
+                        to WCAG 1.4.4.<br><br>All content must be perceivable, understandable and operable up to 200%
+                        zoom.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Grey text doesn’t meet minimum contrast ratio
+                    </td>
+                    <td>
+                        “More details” and “Do not show on [retailer] again” text (colour:
+                        &nbsp;<code>#888888</code>&nbsp;) contrast is too low.
+                        The contrast is 3.5:1, but should be at least 4.5:1.
+                    </td>
+                    <td>
+                        1.4.3
+                    </td>
+                    <td>
+                        Change all instances of &nbsp;<code>#888888</code>&nbsp; or &nbsp;<code>#808080</code>&nbsp;
+                        colours on small text (below 16px) to &nbsp;<code>#767676</code>&nbsp;.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Close button click area too small
+                    </td>
+                    <td>
+                        The clickable area for the close button is too small. According to WCAG 2.5.8, the minimum click
+                        area must be 24x24 pixels (currently 12x12).
+                    </td>
+                    <td>
+                        2.5.8
+                    </td>
+                    <td>
+                        Add &nbsp;<code>padding: 6px;</code>&nbsp; and set
+                        &nbsp;<code>background-size: 50%;</code>&nbsp;, &nbsp;<code>margin-right: 5px;</code>&nbsp; and
+                        &nbsp;<code>margin-top: 5px;</code>&nbsp; to
+                        &nbsp;<code>.tcb-notification__close</code>&nbsp;.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Close button missing accessibility information.
+                    </td>
+                    <td>
+                        As well as the problems outlined in the 1st “Critical” issue, the close button is also missing
+                        accessibility information which explains its function.
+                    </td>
+                    <td>
+                        4.1.2
+                    </td>
+                    <td>
+                        Ensure the close button has the following attribute:
+                        <ul>
+                            <li>&nbsp;<code>aria-label="Close"</code>&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Several font sizes too small.
+                    </td>
+                    <td>
+                        There are many instances where font sizes are too small, especially for “main” content
+                        (non-footer, etc).
 
+                        For example, voucher text is 12px and voucher cashback rates are &nbsp;<code>10px</code>&nbsp;.
+                        Most footer text is &nbsp;<code>11px</code>&nbsp;.
+
+                        Ideally, this content should have a minimum font size of &nbsp;<code>14px</code>&nbsp;. Footer
+                        content should also have a
+                        minimum size of &nbsp;<code>12px</code>&nbsp;.
+                    </td>
+                    <td>
+                        1.4.4
+                    </td>
+                    <td>
+                        All “main” content (non-footer) should have a font size of &nbsp;<code>14px</code>&nbsp; as a
+                        minimum. Footer content
+                        should have a minimum font size of &nbsp;<code>12px</code>&nbsp;. (remember to convert font
+                        sizes to &nbsp;<code>rem</code>&nbsp;).
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Offer banner missing text description.
+                    </td>
+                    <td>
+                        The offer banner which appears on the main screen of the BX has text description, which is
+                        important as the banner contains text and provides additional context to visual users.
+                    </td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>
+                        Add &nbsp;<code>aria-label="[TEXT HERE]"</code> to the offer banner
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;, where [TEXT HERE] is
+                        replaced with the
+                        exact text from the banner.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Loading spinner missing accessibility information.
+                    </td>
+                    <td>
+                        When you first click to open the BX, the loading spinner has no information for non-visual
+                        users, which could cause confusion.
+                    </td>
+                    <td>
+                        4.1.2
+                    </td>
+                    <td>
+                        Add &nbsp;<code>aria-label="Loading"</code>&nbsp; to the div.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        “Store deals” top logo missing text alternative.
+                    </td>
+                    <td>
+                        There is no way for non-visual users to tell which retailer the below rates belong to.
+                    </td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>
+                        Add &nbsp;<code>aria-label="[RETAILER NAME HERE]"</code>&nbsp; to the retailer’s logo, where
+                        [RETAILER NAME HERE] is
+                        replaced with the exact name of the retailer.
+                    </td>
+                </tr>
+            </table> -->
+
+            <!-- Mobile responsive tables -->
+            <table>
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Issues relating to keyboard focus</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>Keyboard-only (and similar) users need to tab through the entire webpage to be able to get
+                        keyboard focus on the BX pop-up.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>2.1.1<br>2.4.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>"Skip to extension" button to be added at the top of the page, which will allow users to skip
+                        directly to the BX pop-up. This link should only appear when the user presses the TAB key before
+                        any other input.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Inaccessible at high zoom levels</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>At zoom levels of over 125% (may vary depending on device), the BX pop-up gets cut off. No
+                        scrollbar appears, meaning there is no way to see the content below the screen.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.4.4</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Scrollbar to appear when content is cropped. BX should be fully usable up to 200% zoom according
+                        to WCAG 1.4.4.<br><br>All content must be perceivable, understandable and operable up to 200%
+                        zoom.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Grey text doesn’t meet minimum contrast ratio</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>“More details” and “Do not show on [retailer] again” text (colour:
+                        &nbsp;<code>#888888</code>&nbsp;) contrast is too low.
+                        The contrast is 3.5:1, but should be at least 4.5:1.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.4.3</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Change all instances of &nbsp;<code>#888888</code>&nbsp; or &nbsp;<code>#808080</code>&nbsp;
+                        colours on small text (below 16px) to &nbsp;<code>#767676</code>&nbsp;.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Close button click area too small</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>The clickable area for the close button is too small. According to WCAG 2.5.8, the minimum click
+                        area must be 24x24 pixels (currently 12x12).</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>2.5.8</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>padding: 6px;</code>&nbsp; and set
+                        &nbsp;<code>background-size: 50%;</code>&nbsp;, &nbsp;<code>margin-right: 5px;</code>&nbsp; and
+                        &nbsp;<code>margin-top: 5px;</code>&nbsp; to
+                        &nbsp;<code>.tcb-notification__close</code>&nbsp;.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Close button missing accessibility information.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>As well as the problems outlined in the 1st “Critical” issue, the close button is also missing
+                        accessibility information which explains its function.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>4.1.2</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Ensure the close button has the following attribute:
+                        <ul>
+                            <li>&nbsp;<code>aria-label="Close"</code>&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Several font sizes are too small.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>There are many instances where font sizes are too small, especially for “main” content
+                        (non-footer, etc).
+
+                        For example, voucher text is 12px and voucher cashback rates are &nbsp;<code>10px</code>&nbsp;.
+                        Most footer text is &nbsp;<code>11px</code>&nbsp;.
+
+                        Ideally, this content should have a minimum font size of &nbsp;<code>14px</code>&nbsp;. Footer
+                        content should also have a
+                        minimum size of &nbsp;<code>12px</code>&nbsp;.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.4.4</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>All “main” content (non-footer) should have a font size of &nbsp;<code>14px</code>&nbsp; as a
+                        minimum. Footer content
+                        should have a minimum font size of &nbsp;<code>12px</code>&nbsp;. (remember to convert font
+                        sizes to &nbsp;<code>rem</code>&nbsp;).</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Offer banner missing text description.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>The offer banner which appears on the main screen of the BX has text description, which is
+                        important as the banner contains text and provides additional context to visual users.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-label="[TEXT HERE]"</code> to the offer banner
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;, where [TEXT HERE] is
+                        replaced with the
+                        exact text from the banner.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Loading spinner missing accessibility information.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>When you first click to open the BX, the loading spinner has no information for non-visual
+                        users, which could cause confusion.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>4.1.2</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-label="Loading"</code>&nbsp; to the div.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>“Store deals” top logo missing text alternative.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>There is no way for non-visual users to tell which retailer the below rates belong to.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-label="[RETAILER NAME HERE]"</code>&nbsp; to the retailer’s logo, where
+                        [RETAILER NAME HERE] is
+                        replaced with the exact name of the retailer.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="proj-slice__content-block" style="margin-top: 50px;">
+            <h3 class="proj-slice__sub-header">Medium priority</h3>
+            <!-- <table>
+                <tr>
+                    <th align="left">
+                        Problem
+                    </th>
+                    <th align="left">
+                        Description
+                    </th>
+                    <th align="left">
+                        WCAG(s)
+                    </th>
+                    <th align="left">
+                        Remediation
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Non-dynamic font sizes.
+                    </td>
+                    <td>
+                        All font sizes are not dynamic and do not respond to browser scaling – they are defined as fixed
+                        &nbsp;<code>px</code>&nbsp; sizes.
+                    </td>
+                    <td>
+                        1.4.4
+                    </td>
+                    <td>
+                        Make sure all font sizes use rem instead of &nbsp;<code>px</code>&nbsp;. The conversion is as
+                        follows:<br><br>
+
+                        <code>[rem font size] = [px font size] / [root font size]</code><br><br>
+
+                        The root font size is usually &nbsp;<code>16px</code>&nbsp;, unless it has been set to something
+                        else.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cashback button missing “disabled” state when clicked.
+                    </td>
+                    <td>
+                        When the pink cashback button is clicked, there is no information which tells assistive
+                        technology that it is no longer clickable.
+                    </td>
+                    <td>
+                        4.1.2
+                    </td>
+                    <td>
+                        Add &nbsp;<code>aria-disabled="true"</code>&nbsp; attribute to the pink cashback buttons when it
+                        has been clicked and the spinner is spinning.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Top tabs missing accessibility information
+                    </td>
+                    <td>
+                        When one of the tabs is active, it has a pink underline. However, there is no information for
+                        assistive technology users to know which one is active.
+                    </td>
+                    <td>
+                        4.1.2
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add &nbsp;<code>role="tablist"</code>&nbsp; to the parent
+                                &nbsp;<code>&lt;div&gt;</code>&nbsp;
+                                of the selectable tabs.
+                            </li>
+
+                            <li>
+                                Ensure that tabs have &nbsp;<code>aria-selected="false"</code>&nbsp; by default, but
+                                have
+                                &nbsp;<code>aria-selected="true"</code>&nbsp; when they are selected.
+                            </li>
+                            <li>
+                                For both of the selectable tabs at the top, do the following:
+                                <ul>
+                                    <li>Add &nbsp;<code>role="tab"</code>&nbsp;</li>
+                                    <li>Add &nbsp;<code>aria-controls="[tab id]"</code>&nbsp;, where [tab id] is the
+                                        same as the id given to each tab panel (see below).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                For both of the &nbsp;<code>&lt;div&gt;</code>&nbsp; elements that currently have
+                                &nbsp;<code>class="tab"</code>&nbsp;, do the following:
+                                <ul>
+                                    <li>Add &nbsp;<code>role="tabpanel"</code>&nbsp;</li>
+                                    <li>Add a unique &nbsp;<code>id</code>&nbsp; to each one, which will be used to
+                                        signify which
+                                        selectable tab this is controlled by.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table> -->
+
+            <!-- Mobile responsive tables -->
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Non-dynamic font sizes.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>All font sizes are not dynamic and do not respond to browser scaling – they are defined as fixed
+                        &nbsp;<code>px</code>&nbsp; sizes.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.4.4</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Make sure all font sizes use rem instead of &nbsp;<code>px</code>&nbsp;. The conversion is as
+                        follows:<br><br>
+
+                        <code>[rem font size] = [px font size] / [root font size]</code><br><br>
+
+                        The root font size is usually &nbsp;<code>16px</code>&nbsp;, unless it has been set to something
+                        else.
+                    </td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Cashback button missing “disabled” state when clicked.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>When the pink cashback button is clicked, there is no information which tells assistive
+                        technology that it is no longer clickable.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>4.1.2</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-disabled="true"</code>&nbsp; attribute to the pink cashback buttons when it
+                        has been clicked and the spinner is spinning.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Top tabs missing accessibility information</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>When one of the tabs is active, it has a pink underline. However, there is no information for
+                        assistive technology users to know which one is active.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>4.1.2</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>
+                        <ul>
+                            <li>Add &nbsp;<code>role="tablist"</code>&nbsp; to the parent
+                                &nbsp;<code>&lt;div&gt;</code>&nbsp;
+                                of the selectable tabs.
+                            </li>
+
+                            <li>
+                                Ensure that tabs have &nbsp;<code>aria-selected="false"</code>&nbsp; by default, but
+                                have
+                                &nbsp;<code>aria-selected="true"</code>&nbsp; when they are selected.
+                            </li>
+                            <li>
+                                For both of the selectable tabs at the top, do the following:
+                                <ul>
+                                    <li>Add &nbsp;<code>role="tab"</code>&nbsp;</li>
+                                    <li>Add &nbsp;<code>aria-controls="[tab id]"</code>&nbsp;, where [tab id] is the
+                                        same as the id given to each tab panel (see below).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                For both of the &nbsp;<code>&lt;div&gt;</code>&nbsp; elements that currently have
+                                &nbsp;<code>class="tab"</code>&nbsp;, do the following:
+                                <ul>
+                                    <li>Add &nbsp;<code>role="tabpanel"</code>&nbsp;</li>
+                                    <li>Add a unique &nbsp;<code>id</code>&nbsp; to each one, which will be used to
+                                        signify which
+                                        selectable tab this is controlled by.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="proj-slice__content-block" style="margin-top: 50px;">
+            <h3 class="proj-slice__sub-header">Low priority</h3>
+            <!-- <table>
+                <tr>
+                    <th align="left">
+                        Problem
+                    </th>
+                    <th align="left">
+                        Description
+                    </th>
+                    <th align="left">
+                        WCAG(s)
+                    </th>
+                    <th align="left">
+                        Remediation
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        TCB logo missing text description.</td>
+                    <td>The TopCashback logo at the top of the BX pop-up is missing a text description. It could be
+                        useful to add one here, to give non-visual users confirmation that they are using our browser
+                        extension (particularly if they have multiple installed).</td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>
+                        Add &nbsp;<code>aria-label="TopCashback"</code>&nbsp; to the logo
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;.</td>
+                </tr>
+                <tr>
+                    <td>
+                        Cashback activated tick icon missing &nbsp;<code>alt</code>&nbsp; attribute.</td>
+                    <td>The tick icon which appears after clicking the pink cashback button does not have an
+                        &nbsp;<code>alt</code>&nbsp;
+                        attribute.<br><br>
+
+                        As the icon doesn’t provide any additional context and is mainly decorative, we should hide this
+                        icon from assistive technology.</td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>
+                        Add an empty &nbsp;<code>alt</code>&nbsp; attribute to the image, like so:<br><br>
+
+                        &nbsp;<code>alt=""</code>&nbsp; <br><br>
+
+                        This instructs assistive technology to ignore this image, instead of trying to “guess” what the
+                        image is.</td>
+                </tr>
+                <tr>
+                    <td>Search bar magnifying glass missing text description.</td>
+                    <td>The magnifying glass in the search bar is missing a text description. Although it isn’t
+                        functional, it could be good to add a text description here to add extra context.</td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>Add &nbsp;<code>aria-label="Search"</code>&nbsp; to the icon
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;.</td>
+                </tr>
+                <tr>
+                    <td>“Best deals” and “Recently visited stores” retailer logos missing &nbsp;<code>alt</code>&nbsp;
+                        text.</td>
+                    <td>Although the retailer name is listed, the logos do not have &nbsp;<code>alt</code>&nbsp; text.
+                        We should add &nbsp;<code>alt</code>&nbsp; text
+                        here for clarity.</td>
+                    <td>
+                        1.1.1
+                    </td>
+                    <td>
+                        Add &nbsp;<code>alt="[RETAILER NAME HERE]"</code>&nbsp; to the retailer’s logo, where [RETAILER
+                        NAME HERE] is replaced
+                        with the exact name of the retailer.</td>
+                </tr>
+            </table> -->
+
+            <!-- Mobile responsive tables -->
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>TCB logo missing text description.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>The TopCashback logo at the top of the BX pop-up is missing a text description. It could be
+                        useful to add one here, to give non-visual users confirmation that they are using our browser
+                        extension (particularly if they have multiple installed).</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-label="TopCashback"</code>&nbsp; to the logo
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Cashback activated tick icon missing &nbsp;<code>alt</code>&nbsp; attribute.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>The tick icon which appears after clicking the pink cashback button does not have an
+                        &nbsp;<code>alt</code>&nbsp; attribute.<br><br>
+
+                        As the icon doesn’t provide any additional context and is mainly decorative, we should hide this
+                        icon from assistive technology.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add an empty &nbsp;<code>alt</code>&nbsp; attribute to the image, like so:<br><br>
+
+                        &nbsp;<code>alt=""</code>&nbsp; <br><br>
+
+                        This instructs assistive technology to ignore this image, instead of trying to “guess” what the
+                        image is.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>Search bar magnifying glass missing text description.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>The magnifying glass in the search bar is missing a text description. Although it isn’t
+                        functional, it could be good to add a text description here to add extra context.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>aria-label="Search"</code>&nbsp; to the icon
+                        &nbsp;<code>&lt;div&gt;</code>&nbsp;.</td>
+                </tr>
+            </table>
+
+            <table style="margin-top: 25px; width: 100%;">
+                <tr>
+                    <th align="left">Problem</th>
+                    <td>“Best deals” and “Recently visited stores” retailer logos missing &nbsp;<code>alt</code>&nbsp;
+                        text.</td>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                    <td>Although the retailer name is listed, the logos do not have &nbsp;<code>alt</code>&nbsp; text.
+                        We should add &nbsp;<code>alt</code>&nbsp; text here for clarity.</td>
+                </tr>
+                <tr>
+                    <th align="left">WCAG(s)</th>
+                    <td>1.1.1</td>
+                </tr>
+                <tr>
+                    <th align="left">Remediation</th>
+                    <td>Add &nbsp;<code>alt="[RETAILER NAME HERE]"</code>&nbsp; to the retailer’s logo, where [RETAILER
+                        NAME HERE] is replaced with the exact name of the retailer.</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+
+
+    <section class="hidden section proj-slice">
+        <h2 class="proj-slice__header">Project retrospective</h2>
+        <div class="proj-slice__content-block">
+            <ul>
+                <li>A variety of issues were successfully identified.</li>
+                <li>remediations were suggested for each issue which were accepted by the third party developers.</li>
+                <li>Only the desktop extension has been tested. The mobile app extension shoud be tested next.</li>
+                <li>Further testing on both browser extensions should be done with a wider range of screen readers and
+                    other accessibility tools.</li>
+                <li>Better testing data could be gained by testing with real accessible-needs users.</li>
+            </ul>
+        </div>
     </section>
 
     <footer class="hidden section proj-slice proj-slice--footer">
         <h2 class="proj-slice__sub-header">See next:</h2>
-        <a href="homepage-redesign.html" class="see-next__text">TopCashback homepage offers redesign</a>
+        <a href="brand-page-redesign.html" class="see-next__text">Brand Pages Redesign – TopCashback</a>
         <a href="index.html#about" class="proj-slice__return-button">Return to homepage</a>
     </footer>
 

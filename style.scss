@@ -1416,3 +1416,51 @@ body {
         }
     }
 }
+
+table,
+tr,
+th,
+td {
+    border: 1px solid #545454;
+    vertical-align: top;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+th {
+    background-color: #191919;
+    font-weight: 700;
+    width: 94px;
+}
+
+td {
+    background-color: #232323;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+table {
+    border-collapse: collapse;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 1000px;
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+    }
+
+    li {
+        font-size: 0.875rem;
+    }
+}
+
+code {
+    background-color: #181818;
+    color: #00CF6E;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
