@@ -1254,11 +1254,13 @@ body {
         text-decoration: none;
         transition: 0.3s;
 
-        &:hover {
+        &:hover,
+        &:focus-visible {
             background-color: #03874b;
             color: #fff;
             outline: 2px solid #ffffff;
         }
+
 
         @media (max-width: 650px) {
             font-size: 1rem;

@@ -1331,7 +1331,7 @@ body::-webkit-scrollbar-thumb {
   text-decoration: none;
   transition: 0.3s;
 }
-.proj-slice__return-button:hover {
+.proj-slice__return-button:hover, .proj-slice__return-button:focus-visible {
   background-color: #03874b;
   color: #fff;
   outline: 2px solid #ffffff;
