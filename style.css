@@ -209,7 +209,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom: 2px solid #00CF6E;
 }
 .nav__item--cv {
-  background-color: #19A966;
+  background-color: #03874b;
   border-bottom: 0 !important;
   border-radius: 999px;
   padding: 7.5px 22px;
@@ -1158,7 +1158,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact {
-  background-color: #19A966;
+  background-color: #03874b;
   padding: 100px 25px;
   text-align: center;
 }
@@ -1322,7 +1322,7 @@ body::-webkit-scrollbar-thumb {
 .proj-slice__return-button {
   background-color: #ffffff;
   border-radius: 999px;
-  color: #19A966;
+  color: #03874b;
   display: inline-block;
   font-size: 1.2rem;
   margin: 50px auto 0;
@@ -1332,7 +1332,7 @@ body::-webkit-scrollbar-thumb {
   transition: 0.3s;
 }
 .proj-slice__return-button:hover {
-  background-color: #19A966;
+  background-color: #03874b;
   color: #fff;
   outline: 2px solid #ffffff;
 }

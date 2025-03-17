@@ -27,6 +27,7 @@ const mobNavMenu = document.querySelector(".nav__wrap");
 
 for (let i = 0; i < allMoreInfoBtns.length; i++) {
     allMoreInfoBtns[i].addEventListener("click", handleMoreInfoClick);
+    allMoreInfoBtns[i].addEventListener("keyup", handleMoreInfoClick);
 }
 
 function initDropdowns() {
@@ -54,8 +55,13 @@ window.addEventListener('resize', () => {
     previousWidth = currentWidth;
 });
 
-function handleMoreInfoClick() {
-    this.parentElement.querySelector(".career-info__more-info-text").classList.toggle("career-info__more-info-text--hidden");
+function handleMoreInfoClick(e) {
+    if (e.type === "keyup" && e.keyCode === 13 || e.type === "click") {
+        const moreInfoText = this.parentElement.querySelector(".career-info__more-info-text");
+        moreInfoText.classList.toggle("career-info__more-info-text--hidden");
+        const isExpanded = moreInfoText.classList.contains("career-info__more-info-text--hidden") ? "false" : "true";
+        this.setAttribute("aria-expanded", isExpanded);
+    }
 }
 
 document.addEventListener("scroll", (e) => {
